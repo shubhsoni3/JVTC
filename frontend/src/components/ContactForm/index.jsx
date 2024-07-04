@@ -14,7 +14,27 @@ export default function ContactForm() {
           <div className="cs_height_42 cs_height_xl_25" />
         </div>
         <div className="col-lg-6">
+          <label className="cs_input_label cs_heading_color">Address</label>
+          <input
+            type="email"
+            className="cs_form_field"
+            placeholder="shivani@gmail.com"
+          />
+          <div className="cs_height_42 cs_height_xl_25" />
+        </div>
+        <div className="col-lg-6">
           <label className="cs_input_label cs_heading_color">Email</label>
+          <input
+            type="text"
+            className="cs_form_field"
+            placeholder="Shivani Shinde"
+          />
+          <div className="cs_height_42 cs_height_xl_25" />
+        </div>
+        <div className="col-lg-6">
+          <label className="cs_input_label cs_heading_color">
+            Mobail Number
+          </label>
           <input
             type="email"
             className="cs_form_field"
@@ -35,7 +55,7 @@ export default function ContactForm() {
           <label className="cs_input_label cs_heading_color">Message</label>
           <textarea
             cols={30}
-            rows={10}
+            rows={4}
             className="cs_form_field"
             placeholder="Write something..."
             defaultValue={""}

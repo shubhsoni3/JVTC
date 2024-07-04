@@ -3,7 +3,7 @@ import SectionHeading from "../../SectionHeading";
 import Spacing from "../../Spacing";
 import IconBoxStyle4 from "../../IconBox/IconBoxStyle4";
 
-export default function DepartmentSectionStyle1({
+export default function DepartmentSectionStyle2({
   sectionTitle,
   sectionTitleUp,
   data,

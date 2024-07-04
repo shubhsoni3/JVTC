@@ -1,6 +1,6 @@
-import { Icon } from '@iconify/react';
-import React from 'react';
-import ModalImage from 'react-modal-image';
+import { Icon } from "@iconify/react";
+import React from "react";
+import ModalImage from "react-modal-image";
 
 export default function Portfolio({ imgUrl }) {
   return (

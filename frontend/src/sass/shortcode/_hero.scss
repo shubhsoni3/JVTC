@@ -77,11 +77,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
     position: relative;
     z-index: 2;
     @media (max-width: 1700px) {
-      padding: 70px;
+      padding: 65px;
     }
     @media (max-width: 1199px) {
       padding: 70px 25px;

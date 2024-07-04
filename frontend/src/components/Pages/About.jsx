@@ -96,7 +96,7 @@ const teamData = [
   //   ],
   // },
   {
-    imgUrl: "images/about/doctor_2.png",
+    imgUrl: "images/about/Dr.Archana.png",
     name: "Dr. Archana Shrivastav",
     designation: "Emergency Medicine Physician",
     description:
@@ -122,11 +122,17 @@ const teamData = [
 ];
 
 const galleryData = [
-  { imgUrl: "/images/about/portfolio_2_lg.jpeg" },
-  { imgUrl: "/images/about/portfolio_3_lg.jpeg" },
-  { imgUrl: "/images/about/portfolio_1_lg.jpeg" },
-  { imgUrl: "/images/about/portfolio_4_lg.jpeg" },
-  { imgUrl: "/images/about/portfolio_5_lg.jpeg" },
+  { imgUrl: "/images/about/IMG_3267.JPG" },
+  { imgUrl: "/images/about/IMG_3206.JPG" },
+  { imgUrl: "/images/about/IMG_3181.JPG" },
+  { imgUrl: "/images/about/IMG_3156.JPG" },
+  { imgUrl: "/images/about/IMG_3116.JPG" },
+  { imgUrl: "/images/about/IMG_3115.JPG" },
+  { imgUrl: "/images/about/IMG_3045.JPG" },
+  { imgUrl: "/images/about/IMG_2986.JPG" },
+  { imgUrl: "/images/about/IMG_2975.JPG" },
+  { imgUrl: "/images/about/IMG_3156.JPG" },
+  { imgUrl: "/images/about/IMG_3116.JPG" },
 ];
 const awardData = [
   {
@@ -149,8 +155,8 @@ export default function About() {
   return (
     <>
       <BannerSectionStyle3
-        bgUrl="/images/about/banner_bg.svg"
-        imgUrl="/images/about/banner_img.png"
+        bgUrl="/images/about/AboutBanner_bg.png"
+        // imgUrl="/images/about/banner_img.png"
         title="Welcome to <br />Jabalpur Fertility Center"
         subTitle="Unlock Your IVF Journey: Experience Wellness, Hope, and Success with Us!"
       />
@@ -158,7 +164,7 @@ export default function About() {
       <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
         <FeaturesSectionStyle2
           sectionTitle="About Jabalpur Fertility Center"
-          imgUrl="/images/icons/DrShrivastav.jpg"
+          imgUrl="/images/icons/JAbalpurFertilityCentre.png"
           data={featureListData}
         />
       </Section>
@@ -185,13 +191,6 @@ export default function About() {
           data={teamData}
         />
       </Section>
-      <Section topMd={170} topLg={120} topXl={80}>
-        <GallerySection
-          sectionTitle="Our Facilities and <br />Latest Activities"
-          sectionTitleUp="HAVE A LOOK AT"
-          data={galleryData}
-        />
-      </Section>
       <Section
         topMd={190}
         topLg={145}
@@ -207,14 +206,29 @@ export default function About() {
           data={awardData}
         />
       </Section>
-      <Section className="cs_footer_margin_0">
+      <Section
+        topMd={170}
+        topLg={120}
+        topXl={80}
+        bottomMd={200}
+        bottomLg={150}
+        bottomXl={110}
+      >
+        <GallerySection
+          sectionTitle="Our Facilities and <br />Latest Activities"
+          sectionTitleUp="HAVE A LOOK AT"
+          data={galleryData}
+        />
+      </Section>
+
+      {/* <Section className="cs_footer_margin_0">
         <BannerSectionStyle4
           bgUrl="images/about/banner_bg_2.jpeg"
           title="Don’t Let Your Health <br />Take a Backseat!"
           subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
           center
         />
-      </Section>
+      </Section> */}
     </>
   );
 }

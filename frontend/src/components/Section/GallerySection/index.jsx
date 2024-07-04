@@ -1,7 +1,7 @@
-import React from 'react';
-import SectionHeading from '../../SectionHeading';
-import Spacing from '../../Spacing';
-import Portfolio from '../../Portfolio';
+import React from "react";
+import SectionHeading from "../../SectionHeading";
+import Spacing from "../../Spacing";
+import Portfolio from "../../Portfolio";
 
 export default function GallerySection({ sectionTitle, sectionTitleUp, data }) {
   return (

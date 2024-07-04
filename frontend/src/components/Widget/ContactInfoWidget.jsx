@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function ContactInfoWidget() {
   return (
@@ -16,13 +17,21 @@ export default function ContactInfoWidget() {
         <i className="cs_accent_bg">
           <Icon icon="fluent:call-24-regular" />
         </i>
-        +91 - 9826553302
+        <Link to="tel:+91-7770877117">+91-7770877117</Link>
+      </li>
+      <li>
+        <i className="cs_accent_bg">
+          <Icon icon="fluent:call-24-regular" />
+        </i>
+        <Link to="tel:+91-9826135501">+91-9826135501</Link>
       </li>
       <li>
         <i className="cs_accent_bg">
           <Icon icon="bi:envelope" />
         </i>
-        dr.archanashrivastav@gmail.com
+        <Link to="mailto:fertilitycenterjbp@gmail.com">
+          fertilitycenterjbp@gmail.com
+        </Link>
       </li>
     </ul>
   );

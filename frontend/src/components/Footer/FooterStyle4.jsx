@@ -5,6 +5,7 @@ import SocialWidget from "../Widget/SocialWidget";
 import MenuWidget from "../Widget/MenuWidget";
 import NewsletterStyle4 from "../Widget/NewsletterStyle4";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const menuDataOne = [
   { title: "About Us", href: "/about" },
@@ -67,7 +68,9 @@ export default function FooterStyle4() {
         <div className="cs_footer_bottom">
           <div className="container">
             <div className="cs_copyright">
-              Copyright © {year} DOAGuru Infosystems. All rights reserved.
+              <Link to="/Admin-Login">
+                Copyright © {year} DOAGuru Infosystems. All rights reserved.
+              </Link>
             </div>
           </div>
         </div>

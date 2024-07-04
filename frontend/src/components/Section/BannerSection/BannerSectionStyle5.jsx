@@ -1,5 +1,5 @@
-import React from 'react';
-import parse from 'html-react-parser';
+import React from "react";
+import parse from "html-react-parser";
 
 export default function BannerSectionStyle5({
   bgUrl,
@@ -12,9 +12,9 @@ export default function BannerSectionStyle5({
       className="cs_banner cs_style_5 cs_bg_filed"
       style={{ backgroundImage: `url(${bgUrl})` }}
     >
-      <div className="cs_banner_img">
+      {/* <div className="cs_banner_img">
         <img src={imgUrl} alt="Banner" />
-      </div>
+      </div> */}
       <div className="container">
         <div className="cs_banner_text">
           <h2 className="cs_banner_title cs_fs_72">{parse(title)}</h2>

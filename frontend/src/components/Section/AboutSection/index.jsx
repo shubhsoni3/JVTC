@@ -39,11 +39,11 @@ export default function AboutSection({
                   {subTitle}
                 </h3>
               </div>
-              <Spacing md="72" lg="72" />
+              {/* <Spacing md="72" lg="72" /> */}
               <ul className="cs_about_text_list">
                 {featureList.map((item, index) => (
                   <li key={index}>
-                    <i className="cs_accent_color">
+                    {/* <i className="cs_accent_color">
                       <svg
                         width={35}
                         height={24}
@@ -56,7 +56,7 @@ export default function AboutSection({
                           fill="#e12454"
                         />
                       </svg>
-                    </i>
+                    </i> */}
                     <h3 className="cs_normal cs_fs_32 cs_body_color">
                       {item.featureListTitle}
                     </h3>

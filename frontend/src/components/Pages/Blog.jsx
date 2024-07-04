@@ -6,26 +6,25 @@ import Breadcrumb from "../Breadcrumb";
 import { pageTitle } from "../../helpers/PageTitle";
 const blogData = [
   {
-    title:
-      "The Importance of Mental Health: Understanding and Managing Anxiety Disorders",
+    title: "Symptoms before period: important information",
     thumbUrl: "images/blog/post_1.jpeg",
-    date: "March 12",
+    date: "March 12 , 2024",
     btnText: "Learn More",
     href: "/blog/blog-details",
     socialShare: true,
   },
   {
-    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+    title: `Why does stomach ache before periods?`,
     thumbUrl: "images/blog/post_2.jpeg",
-    date: "March 11",
+    date: "March 11 , 2024",
     btnText: "Learn More",
     href: "/blog/blog-details",
     socialShare: true,
   },
   {
-    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+    title: "Why does PCOS occur? Causes and preventive measures",
     thumbUrl: "images/blog/post_3.jpeg",
-    date: "March 9",
+    date: "March 9 , 2024",
     btnText: "Learn More",
     href: "/blog/blog-details",
     socialShare: true,
@@ -90,13 +89,13 @@ export default function Blog() {
       <Section bottomMd={200} bottomLg={150} bottomXl={110}>
         <BlogSectionStyle2 data={blogData} />
       </Section>
-      <Section className="cs_footer_margin_0">
+      {/* <Section className="cs_footer_margin_0">
         <BannerSectionStyle9
           title="Don’t Let Your Health <br />Take a Backseat!"
           subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
           imgUrl="/images/doctors/banner_img_3.png"
         />
-      </Section>
+      </Section> */}
     </>
   );
 }

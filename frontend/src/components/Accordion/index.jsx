@@ -48,22 +48,10 @@ function AccordionItem({ title, content, isOpen, onClick }) {
 
 export default function Accordion({ data, variant }) {
   const [openItemIndex, setOpenItemIndex] = useState(-1); // Initialize with -1 for no item open initially
-  const [firstItemOpen, setFirstItemOpen] = useState(true); // Set the first item to open initially
 
   const handleItemClick = (index) => {
-    if (index === openItemIndex) {
-      setOpenItemIndex(-1);
-    } else {
-      setOpenItemIndex(index);
-    }
+    setOpenItemIndex(index === openItemIndex ? -1 : index);
   };
-  useEffect(() => {
-    // Open the first item when the component mounts
-    if (firstItemOpen) {
-      setOpenItemIndex(2);
-      setFirstItemOpen(false);
-    }
-  }, [firstItemOpen]);
 
   return (
     <>

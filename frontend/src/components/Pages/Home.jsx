@@ -1,16 +1,11 @@
 import React from "react";
 import Hero from "../Hero";
 import AboutSection from "../Section/AboutSection";
-import BrandsSection from "../Section/BrandsSection";
 import FunFactSection from "../Section/FunFactSection/index";
-
 import Section from "../Section";
-
-import TestimonialSectionStyle3 from "../Testimonial/TestimonialSectionStyle3";
 import BlogSection from "../Section/BlogSection";
 import AppointmentSection from "../Section/AppointmentSection";
 import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
-import AwardSection from "../Section/AwardSection";
 import DepartmentSection from "../Section/DepartmentSection";
 import { pageTitle } from "../../helpers/PageTitle";
 import FeaturesSectionStyle5 from "../Feature/FeaturesSectionStyle5";
@@ -25,7 +20,7 @@ const featureListData = [
     iconUrl: "/images/home_4/compassion.svg",
     title: "Advance Infrastructure",
     subTitle:
-      "We understand that seeking medical care can be a stressful and emotional experience, and we strive to create a welcoming and supportive environment that puts our patients at ease.",
+      "We understand that seeking medical care can be a stressful experience, and we strive to provide world-class infrastructure to achieve the best results for our patients.",
 
     subTitles:
       "'I got the best possible treatment and owe it to the Doctor and Staff! I sincerely followed his diagnosis and recommended treatment and it worked wonders! Very caring and concerned!'",
@@ -36,7 +31,7 @@ const featureListData = [
     iconUrl: "/images/home_4/excellence.svg",
     title: "High IVF Success Rate",
     subTitle:
-      "We are committed to providing excellent medical care and services to our patients. We believe in continuously improving our skills, and resources to ensure that we deliver the highest quality care possible.",
+      "We believe in continuously updating our technologies and improving our skills and resources to ensure that we deliver the quality care possible. We are happy and proud to say that we have been providing excellent IVF success rates.",
 
     subTitles:
       "'The Gynecologist took a great care  of me throught out my pregnacies. would definitely recommend others.'",
@@ -46,7 +41,7 @@ const featureListData = [
   {
     iconUrl: "/images/home_4/integrity.svg",
     title: "Cost Effective",
-    subTitle: `We believe in practicing medicine with integrity and honesty. We are transparent in our communication and decision-making processes, and we always put our patient's interests first.`,
+    subTitle: `We believe in practicing medicine with integrity and honesty. We have designed comprehensive, highly affordable packages with the aim of providing advanced fertility services to as many people as possible.`,
     subTitles:
       "'ONe of my freind suggest this gynecologist after we had some trouble conceiving children.But now after their effective treatment I am very happy'",
     ratingNumber: "4.0",
@@ -56,7 +51,7 @@ const featureListData = [
     iconUrl: "/images/home_4/respect.svg",
     title: "Transparency",
     subTitle:
-      "We treat all individuals with respect and dignity, regardless of their background, beliefs, or circumstances. We believe that every person deserves to be treated with compassion and kindness.",
+      "We treat all individuals with respect, compassion, and kindness, regardless of their background, beliefs, or circumstances. We are transparent in our communications and decision-making processes, and we always put our patients' interests first.",
     subTitles:
       "'I got the best possible treatment and owe it to the Doctor and Staff! I sincerely followed his diagnosis and recommended treatment and it worked wonders! Very caring and concerned!'",
     ratingNumber: "5",
@@ -66,7 +61,7 @@ const featureListData = [
     iconUrl: "/images/home_4/teamwork.svg",
     title: "Support",
     subTitle:
-      "We believe in working collaboratively with our team members and other healthcare professionals to provide comprehensive and effective care to our patients.",
+      "We believe in providing a comprehensive support system, thus providing everything from basic treatment to advanced care. We have a highly skilled team to ensure in-depth investigations, perfect individualized treatment plans, advanced endoscopic fertility-enhancing surgeries, the highest quality fertility treatment, and excellent management of high-risk pregnancies.",
     subTitles:
       "'The Gynecologist took a great care  of me throught out my pregnacies. would definitely recommend others.'",
     ratingNumber: "4.5",
@@ -137,32 +132,6 @@ const blogData = [
     socialShare: true,
   },
 ];
-const awardData = [
-  {
-    title: "Malcolm Baldrige National Quality Award",
-    subTitle:
-      "This award recognizes healthcare organizations that have demonstrated excellence in leadership, strategic planning, customer and employee satisfaction, and operational efficiency.",
-    iconUrl: "images/icons/award.svg",
-  },
-  {
-    title: "HIMSS Davies Award",
-    subTitle:
-      "This award recognizes healthcare organizations that have used health information technology to improve patient outcomes and reduce costs.",
-    iconUrl: "images/icons/award.svg",
-  },
-  {
-    title: "Healthgrades National’s Best Hospital",
-    subTitle:
-      "This recognition is given to hospitals that have achieved high ratings for clinical quality and patient safety across multiple specialties and procedures.",
-    iconUrl: "images/icons/award.svg",
-  },
-  {
-    title: "Joint Commission Gold Seal of Approval",
-    subTitle:
-      "This recognition is given to hospitals that have met rigorous standards for patient safety and quality of care.",
-    iconUrl: "images/icons/award.svg",
-  },
-];
 const departmentData = [
   {
     title: "Emergency Department",
@@ -195,39 +164,13 @@ const departmentData = [
     href: "/departments/department-details",
   },
 ];
-const testimonialData = [
-  {
-    text: "I got the best possible treatment and owe it to the Doctor and Staff! I sincerely followed his diagnosis and recommended treatment and it worked wonders! Very caring and concerned!",
-    ratingNumber: "5",
-    // avatarImgUrl: "/images/home_3/testimonial_img_1.png",
-    avatarName: "Kavita Sinha",
-  },
-  {
-    text: "I got the best possible treatment and owe it to the Doctor and Staff! I sincerely followed his diagnosis and recommended treatment and it worked wonders! Very caring and concerned!",
-    ratingNumber: "4.5",
-    // avatarImgUrl: "/images/home_3/testimonial_img_2.png",
-    avatarName: "Preeti Singh",
-  },
-  {
-    text: "I got the best possible treatment and owe it to the Doctor and Staff! I sincerely followed his diagnosis and recommended treatment and it worked wonders! Very caring and concerned!.",
-    ratingNumber: "4",
-    // avatarImgUrl: "/images/home_3/testimonial_img_1.png",
-    avatarName: "Sonia Mishra",
-  },
-  // {
-  //   text: "I recently had to bring my child to ProHealth for a minor injury, and I was so impressed with the care he received. The pediatrician was great with him and made him feel at ease, and the entire staff was kind and attentive.",
-  //   ratingNumber: "4.5",
-  //   // avatarImgUrl: "/images/home_3/testimonial_img_2.png",
-  //   avatarName: "PAULO HUBERT",
-  // },
-];
 const teamData = [
   {
-    imgUrl: "images/about/Dr.Archana.png",
-    name: "Dr. Archana Shrivastav, MD",
-    designation: "Emergency Medicine Physician",
+    imgUrl: "images/about/DrShrivastavMaam.jpg",
+    name: "Dr. Archana Shrivastav MBBS , DGO",
+    // designation: "Emergency Medicine Physician",
     description:
-      "With expertise in treating acute illnesses and injuries in medicine physician",
+      "Dr. Archana Shrivastav has 24 years of experience in Obstetrics, Gynecology, and Laparoscopy, specializing in fertility treatment and advanced laparoscopic surgeries.",
     social: [
       { icon: "fa6-brands:facebook-f", href: "/about" },
       { icon: "fa6-brands:linkedin-in", href: "/about" },
@@ -236,11 +179,11 @@ const teamData = [
   },
 ];
 const funFactData = [
-  { number: "20+", title: "Years of experience" },
+  { number: "15+", title: "Years of experience" },
   { number: "95%", title: "Patient satisfaction rating" },
   { number: "5000+", title: "Patients served annually" },
   { number: "10+", title: "Healthcare providers on staff" },
-  { number: "22+", title: "Convenient locations in the area" },
+  // { number: "22+", title: "Convenient locations in the area" },
 ];
 
 export default function Home() {
@@ -248,9 +191,10 @@ export default function Home() {
   return (
     <>
       <Container>
+        {/* Start About Section */}
         <Hero
           title="SPREADING THE JOY OF MOTHERHOOD"
-          subTitle="We are committed to providing you with the best medical and healthcare services to help you live healthier and happier."
+          subTitle="We are committed to providing the best technology to achieve great results in IVF and fertility treatments for infertile couples in our city and beyond."
           bgUrl="/images/home_1/hero_bg.png"
           videoBtnText="See how we work"
           videoUrl="https://www.youtube.com/embed/VcaAVWtP48A"
@@ -260,20 +204,25 @@ export default function Home() {
               subTitle: "Shivani Tiwari",
               iconUrl: "/images/icons/ambulance.svg",
             },
+          ]}
+          dateList={[
             {
               title: "Booking Date",
-              subTitle: "dd-mm-yyyy",
+              date: "dd-mm-yyyy",
               iconUrl: "/images/icons/appointment_icon_x.svg",
             },
+          ]}
+          contactList={[
             {
-              title: "Mobail Number",
-              subTitle: "7000XXXXXX",
+              title: "Mobile Number",
+              contact: "7000XXXXXX",
               iconUrl: "/images/contact/icon_1.svg",
             },
           ]}
           btnText="Book Now"
           btnUrl="/appointments"
         />
+        {/* End Hero Section */}
 
         {/* Start About Section */}
         <Section>
@@ -282,13 +231,13 @@ export default function Home() {
               imgUrl="/images/home_1/AboutIVF.png"
               spiningImgUrl="/images/home_1/about_mini.svg"
               title="About"
-              subTitle="Dr. Archana Shrivastav"
+              subTitle="Jabalpur Fertility Center"
               featureList={[
                 {
                   // featureListTitle:
                   //   "ProHealth is a team of experienced medical professionals",
                   featureListSubTitle:
-                    "Well located in Jabalpur, Madhya Pradesh, we Dr. Archana Shrivastav are known to be the best and most effective treatment provider. As a result of which the patients trusts and well connect with us. Our areas of specialisation include gynaecology and gastroenterology. We provide perfect care to the patients and help them to get rid of the problem through which they are suffering from. Our objective is to deal with various health problems encountered by number of people. The technical and architectural designing of this clinic has been done specifically to provide the benefit of an excellent health care system. We are very prominent in our service. Our clinic has achieved eminence in this industry because of our clients' belief and trust. Book an appointment today for a healthier tomorrow!",
+                    "Well located in the heart of Jabalpur, Madhya Pradesh, Jabalpur Fertility Center are one of the oldest and best treatment provider. As a result of which the patients trusts and well connect with us. Our areas of specialisation include gynaecology and gastroenterology. We provide perfect care to the patients and help them to get rid of the problem through which they are suffering from. Our objective is to deal with various health problems encountered by number of people. The technical and architectural designing of this clinic has been done specifically to provide the benefit of an excellent health care system. We are very prominent in our service. Our clinic has achieved eminence in this industry because of our clients' belief and trust. Book an appointment today for a healthier tomorrow!",
                 },
               ]}
             />
@@ -297,7 +246,6 @@ export default function Home() {
         {/* End About Section */}
 
         {/* Start Banner Section */}
-
         <Section>
           <Spacing md="72" lg="50" />
           <FunFactSection
@@ -347,7 +295,7 @@ export default function Home() {
         {/* Start Departments Section */}
         <Section topMd={185} topLg={150} topXl={110}>
           <DepartmentSection
-            sectionTitle="OUR FERTILITY SERVICES"
+            sectionTitle="Expertise in Treatment of"
             bgUrl="images/home_1/JabalpuIVF.png"
             data={departmentData}
             titleStyle={{ color: "#fff" }}

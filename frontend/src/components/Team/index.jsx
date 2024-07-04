@@ -1,6 +1,6 @@
-import { Icon } from '@iconify/react';
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Icon } from "@iconify/react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Team({
   imgUrl,
@@ -12,7 +12,7 @@ export default function Team({
   return (
     <div className="cs_team cs_style_1 text-center cs_radius_20 cs_type_1">
       <div className="cs_member_img">
-        <img src={imgUrl} alt={name} />
+        <img src={imgUrl} alt={name} style={{ borderRadius: "20px" }} />
       </div>
       <div className="cs_team_meta">
         <div>

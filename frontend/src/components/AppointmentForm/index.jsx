@@ -1,9 +1,16 @@
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
+import TimePicker from "react-time-picker";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import "react-time-picker/dist/TimePicker.css";
 
 export default function AppointmentForm() {
+  const [time, setTime] = useState("10:00"); // Default time value
+
+  const handleTimeChange = (event) => {
+    setTime(event.target.value);
+  };
   const [selectedDate, setSelectedDate] = useState(null);
   return (
     <form action="#" className="row">
@@ -62,6 +69,8 @@ export default function AppointmentForm() {
             type="time"
             className="cs_form_field cs_timepicker"
             placeholder="10:00AM"
+            value={time}
+            onChange={handleTimeChange}
           />
           <i>
             <Icon icon="fa6-regular:clock" />

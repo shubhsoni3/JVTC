@@ -11,14 +11,18 @@ export default function ContactInfoSection({ sectionTitle }) {
         <div className="col-xl-4">
           <IconBoxStyle11
             title="Phone"
-            subTitle="+91-9826553302"
+            subTitle={<a href="tel:+91-7770877117">+91-7770877117</a>}
             iconSrc="/images/contact/icon_1.svg"
           />
         </div>
         <div className="col-xl-4">
           <IconBoxStyle11
             title="Email"
-            subTitle="dr.archanashrivastav@gmail.com"
+            subTitle={
+              <a href="mailto:fertilitycenterjbp@gmail.com">
+                fertilitycenterjbp@gmail.com
+              </a>
+            }
             iconSrc="/images/contact/icon_2.svg"
           />
         </div>
