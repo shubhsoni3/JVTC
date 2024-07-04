@@ -6,6 +6,8 @@ import WorkingProcess from "../Section/WorkingProcess";
 import { FaUserMd } from "react-icons/fa";
 import styled from "styled-components";
 import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
+import Spacing from "../Spacing";
+import Post from "../Post";
 const workingProcessData = [
   {
     title: "Consultation",
@@ -96,6 +98,30 @@ const faqData = [
     title: "Are there any risks or side effects associated with IVF?",
     content:
       "IVF is a safe and well-established procedure, but like any medical treatment, it has potential risks and side effects, including Ovarian Hyperstimulation Syndrome (OHSS), a rare condition where the ovaries become swollen and painful after stimulation; Multiple Pregnancies, with a higher risk of twins or triplets if multiple embryos are transferred; Ectopic Pregnancy, a rare occurrence where the embryo implants outside the uterus; Emotional Stress, as the process can be emotionally challenging and counseling is recommended to help manage stress and anxiety; and side effects from medications, such as mild side effects like bloating, mood swings, and headaches from fertility medications.",
+  },
+];
+const relatedBlog = [
+  {
+    title:
+      "The Importance of Mental Health: Understanding and Managing Anxiety Disorders",
+    thumbUrl: "/images/blog/post_1.jpeg",
+    date: "March 12",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
+  },
+  {
+    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+    thumbUrl: "/images/blog/post_2.jpeg",
+    date: "March 11",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
+  },
+  {
+    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+    thumbUrl: "/images/blog/post_3.jpeg",
+    date: "March 9",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
 ];
 export default function IVF() {
@@ -240,7 +266,7 @@ export default function IVF() {
                     </li>
                   </p>
 
-                  <h2>Why Choose Jabalpur Fertility Centre for IUI?</h2>
+                  <h2>Why Choose Jabalpur Fertility Centre for IVI ?</h2>
                   <li>
                     <b>Expertise and Experience : </b>
                     Led by Dr. Archana Shrivastav, our team has extensive
@@ -291,6 +317,21 @@ export default function IVF() {
             </div>
           </div>
         </Section>
+        <Section bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}>
+          <div className="container">
+        <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
+          <Spacing md="57" />
+          <div className="row cs_gap_y_40">
+            {relatedBlog?.map((item, index) => (
+              <div className="col-xl-4 col-md-6" key={index}>
+                <Post {...item} />
+              </div>
+            ))}
+          </div>
+          </div>
+          </Section>
       </Container>
     </>
   );

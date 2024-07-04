@@ -12,47 +12,27 @@ import WorkingProcess from "../Section/WorkingProcess";
 import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
 const workingProcessData = [
   {
-    title: "Initial Consultation and Assessment",
+    title: "Preoperative Evaluation",
     subTitle:
-      "You can book an appointment with us by <br />calling our office, filling out an online form.",
+      "To plan the surgical approach, a comprehensive assessment of the patient’s medical history, symptoms, and diagnostic imaging, such as ultrasound and MRI, is conducted. This is followed by a discussion of surgical goals, potential risks, benefits, and expected outcomes.",
     iconUrl: "/images/home_2/department_icon3.png",
     number: "01",
   },
   {
-    title: "Ovarian Stimulation (For Egg or Embryo Freezing)",
+    title: "Surgical Procedure",
     subTitle:
-      "For the IVF process, baseline bloodwork and an ultrasound are essential. These tests provide crucial information about your reproductive health, helping <br /> us tailor the most effective treatment plan for you.",
+      "General anesthesia is administered to ensure comfort and safety during the procedure. Small keyhole incisions are made near the navel and lower abdomen to insert a laparoscope, which is a camera, and surgical instruments. The surgery involves precise visualization of pelvic organs and the surgical removal or treatment of targeted tissues such as fibroids, cysts, or endometriotic lesions. Finally, the incisions are closed with sutures or surgical tape, and a sterile dressing is applied.",
     iconUrl: "/images/home_2/department_ichi2.png",
     number: "02",
   },
   {
-    title: "Egg Retrieval (For Egg Freezing)",
+    title: "Postoperative Care",
     subTitle:
-      "Ovarian stimulation is a crucial part of the IVF process. It involves using medications to stimulate your ovaries, encouraging the development of multiple eggs for retrieval and fertilization..",
+      "After the procedure, patients typically recover in a designated recovery area under medical supervision until they are fully awake and stable. Medications are provided to manage postoperative discomfort, and patients receive instructions for home care and follow-up appointments.",
     iconUrl: "/images/home_2/department_ichi3.png",
     number: "03",
   },
-  {
-    title: "Sperm Collection (For Sperm Freezing)",
-    subTitle:
-      "Oocyte maturation involves hormone treatments <br /> to ensure eggs reach full maturity, making <br />them ready for retrieval, fertilization, and<br /> subsequent  embryo development, which<br /> are crucial steps in the IVF process.",
-    iconUrl: "/images/home_2/department_ichi4.png",
-    number: "04",
-  },
-  {
-    title: "Embryo Freezing (For Embryo Freezing)",
-    subTitle:
-      "Egg retrieval involves collecting mature eggs from the ovaries through a minor surgical procedure, allowing them to be fertilized in the lab as part of the IVF process.",
-    iconUrl: "/images/home_2/department_icon7.png",
-    number: "05",
-  },
-  {
-    title: "Storage and Maintenance",
-    subTitle:
-      "Egg retrieval involves collecting mature eggs from the ovaries through a minor surgical procedure, allowing them to be fertilized in the lab as part of the IVF process.",
-    iconUrl: "/images/home_2/department_ichi7.png",
-    number: "06",
-  },
+  
 ];
 const relatedBlog = [
   {
@@ -226,7 +206,7 @@ export default function CompleteWorkup() {
             bottomXl={110}
           >
             <WorkingProcess
-              sectionTitle="The Fertility Preservation Process"
+              sectionTitle="The Laparoscopic Surgery Procedure"
               sectionTitleUp=""
               sectionTitleDown=""
               sectionSubTitle=""
@@ -323,8 +303,11 @@ export default function CompleteWorkup() {
             </div>
           </Section>
 
-          <Spacing md="135" lg="100" />
-          <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
+          <Section bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}>
+          <div className="container">
+        <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
@@ -333,7 +316,8 @@ export default function CompleteWorkup() {
               </div>
             ))}
           </div>
-          <Spacing md="200" xl="150" lg="110" />
+          </div>
+          </Section>
         </div>
       </Container>
     </>

@@ -362,8 +362,11 @@ export default function CompleteWorkup() {
             </div>
           </Section>
 
-          <Spacing md="135" lg="100" />
-          <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
+          <Section bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}>
+          <div className="container">
+        <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
@@ -372,7 +375,9 @@ export default function CompleteWorkup() {
               </div>
             ))}
           </div>
-          <Spacing md="200" xl="150" lg="110" />
+          </div>
+          </Section>
+          
         </div>
       </Container>
     </>

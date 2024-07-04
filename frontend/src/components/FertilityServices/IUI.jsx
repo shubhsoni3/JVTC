@@ -6,6 +6,8 @@ import WorkingProcess from "../Section/WorkingProcess";
 import { FaUserMd } from "react-icons/fa";
 import styled from "styled-components";
 import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
+import Spacing from "../Spacing";
+import Post from "../Post";
 const workingProcessData = [
   {
     title: "Egg Making",
@@ -68,6 +70,30 @@ const faqData = [
     title: "Are there any risks or side effects associated with IUI ?",
     content:
       "IUI is generally considered a safe procedure with minimal risks. However, some potential risks and side effects include mild discomfort, slight cramping or spotting after the procedure, a higher chance of multiple pregnancies (twins, triplets, etc.) if fertility medications are used, a small risk of infection following the procedure, and Ovarian Hyperstimulation Syndrome (OHSS) if ovulation-inducing drugs are used, which can cause swollen and painful ovaries.",
+  },
+];
+const relatedBlog = [
+  {
+    title:
+      "The Importance of Mental Health: Understanding and Managing Anxiety Disorders",
+    thumbUrl: "/images/blog/post_1.jpeg",
+    date: "March 12",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
+  },
+  {
+    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+    thumbUrl: "/images/blog/post_2.jpeg",
+    date: "March 11",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
+  },
+  {
+    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+    thumbUrl: "/images/blog/post_3.jpeg",
+    date: "March 9",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
 ];
 export default function IUI() {
@@ -254,6 +280,22 @@ export default function IUI() {
             </div>
           </div>
         </Section>
+
+        <Section bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}>
+          <div className="container">
+        <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
+          <Spacing md="57" />
+          <div className="row cs_gap_y_40">
+            {relatedBlog?.map((item, index) => (
+              <div className="col-xl-4 col-md-6" key={index}>
+                <Post {...item} />
+              </div>
+            ))}
+          </div>
+          </div>
+          </Section>
       </Container>
     </>
   );

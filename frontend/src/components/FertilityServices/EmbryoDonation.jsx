@@ -5,6 +5,9 @@ import { pageTitle } from "../../helpers/PageTitle";
 import BannerSectionStyle3 from "../Section/BannerSection/BannerSectionStyle3";
 import styled from "styled-components";
 import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
+import WorkingProcess from "../Section/WorkingProcess";
+import Spacing from "../Spacing";
+import Post from "../Post";
 
 const faqData = [
   {
@@ -35,62 +38,66 @@ const faqData = [
   },
 ];
 
-const faqData1 = [
+const workingProcessData = [
   {
-    title: "What is IUI?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Initial Consultation and Assessment",
+    subTitle:
+      "A comprehensive evaluation of the recipient couple is conducted, including a review of medical history, a physical examination, and fertility testing. This is followed by a detailed discussion of the embryo donation process, covering potential risks, success rates, and expected outcomes.",
+    iconUrl: "/images/home_2/department_IUI1.png",
+    number: "01",
   },
   {
-    title: "How much is the Success Rate of IUI?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Donor Embryo Matching",
+    subTitle:
+      "Donor embryos are selected based on compatibility and medical suitability, followed by screening for infectious diseases and genetic conditions.",
+    iconUrl: "/images/home_2/department_IUI2.png",
+    number: "02",
   },
   {
-    title: "What is the Cost of IUI?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Endometrial Preparation",
+    subTitle:
+      "Medications are administered to the recipient to prepare the uterine lining for embryo implantation, and regular monitoring is performed through blood tests and ultrasounds to ensure optimal endometrial thickness and receptivity.",
+    iconUrl: "/images/home_2/department_icon6.png",
+    number: "03",
   },
+  {
+    title: "Embryo Transfer",
+    subTitle:
+      "Frozen donor embryos are thawed in the laboratory, and one or more healthy embryos are transferred into the recipient’s uterus using a thin, flexible catheter. The procedure is usually painless and does not require anesthesia.",
+    iconUrl: "/images/home_2/department_icon3.png",
+    number: "04",
+  },
+  {
+    title: "Luteal Phase Support and Follow-Up",
+    subTitle:
+      "Progesterone or other medications are administered to support the uterine lining and promote implantation, with close monitoring and follow-up appointments scheduled to check for signs of pregnancy and provide ongoing support.",
+    iconUrl: "/images/home_2/department_icon9.png",
+    number: "05",
+  },
+];
+
+const relatedBlog = [
   {
     title:
-      "When there is no Abnormality in our Tests, Why are we not having a Pregnancy?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "The Importance of Mental Health: Understanding and Managing Anxiety Disorders",
+    thumbUrl: "/images/blog/post_1.jpeg",
+    date: "March 12",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
   {
-    title: "For which Patient, IUI is Needed?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+    thumbUrl: "/images/blog/post_2.jpeg",
+    date: "March 11",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
   {
-    title: "What is Laparoscopy and who needs it?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "How is Tubal Blockage Tested?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "What to do if Sperm Count is Low?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: " Why does IVF Fail?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "What to do if IVF Fails?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "What is the Cost of IVF treatment?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+    thumbUrl: "/images/blog/post_3.jpeg",
+    date: "March 9",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
 ];
 
@@ -178,30 +185,22 @@ export default function EmbryoDonation() {
 
         {/* Start FAQ Section */}
         <Section
-          topMd={190}
-          topLg={145}
-          topXl={105}
-          bottomMd={200}
-          bottomLg={150}
-          bottomXl={110}
+          topMd={185}
+          topLg={140}
+          topXl={100}
+          bottomMd={20}
+          bottomLg={15}
+          bottomXl={11}
         >
-          <div className="row">
-            <div className="col-xxl-6">
-              <FaqSectionStyle2
-                data={faqData}
-                sectionTitle="Usually Asked"
-                sectionTitleUp="What People"
-              />
-            </div>
-            <div className="col-xxl-6">
-              <FaqSectionStyle2
-                data={faqData1}
-                sectionTitle="Usually Asked"
-                sectionTitleUp="What People"
-              />
-            </div>
-          </div>
+          <WorkingProcess
+            sectionTitle="How IUI Works"
+            sectionTitleUp=""
+            sectionTitleDown=""
+            sectionSubTitle=""
+            data={workingProcessData}
+          />
         </Section>
+
         {/* End FAQ Section */}
 
         <Section
@@ -300,6 +299,21 @@ export default function EmbryoDonation() {
             </div>
           </div>
         </Section>
+        <Section bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}>
+          <div className="container">
+        <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
+          <Spacing md="57" />
+          <div className="row cs_gap_y_40">
+            {relatedBlog?.map((item, index) => (
+              <div className="col-xl-4 col-md-6" key={index}>
+                <Post {...item} />
+              </div>
+            ))}
+          </div>
+          </div>
+          </Section>
       </Container>
     </>
   );

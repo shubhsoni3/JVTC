@@ -5,6 +5,9 @@ import { pageTitle } from "../../helpers/PageTitle";
 import BannerSectionStyle3 from "../Section/BannerSection/BannerSectionStyle3";
 import styled from "styled-components";
 import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
+import WorkingProcess from "../Section/WorkingProcess";
+import Spacing from "../Spacing";
+import Post from "../Post";
 
 const faqData = [
   {
@@ -33,63 +36,75 @@ const faqData = [
       "TESA and PESA are generally safe procedures with minimal risks, but potential side effects and risks include discomfort or pain at the site of needle insertion, which can be managed with over-the-counter pain medication; minor swelling or bruising of the scrotum, usually resolving within a few days; a rare risk of infection at the needle insertion site, which can be mitigated with proper aseptic techniques; minimal risk of bleeding within the scrotum, generally self-limiting and not requiring intervention; and the emotional and psychological aspects of undergoing these procedures and potential outcomes, which should be considered and supported with counseling if needed.",
   },
 ];
+const workingProcessData = [
+  {
+    title: "Initial Consultation and Assessment",
+    subTitle:
+      "A comprehensive evaluation of the male partner is conducted, including a review of medical history, a physical examination, and fertility testing. This is followed by a detailed discussion of the TESA procedure, covering potential risks, success rates, and expected outcomes.",
+    iconUrl: "/images/home_2/department_icon1.png",
+    number: "01",
+  },
+  {
+    title: "Sperm Aspiration",
+    subTitle:
+      "TESA involves using a fine needle to aspirate sperm directly from the testicle under local anesthesia or sedation, with the procedure guided by ultrasound to locate and access the testicular tissue containing sperm.",
+    iconUrl: "/images/home_2/department_icon2.png",
+    number: "02",
+  },
+  {
+    title: "Sperm Retrieval and Processing",
+    subTitle:
+      "The aspirated tissue is processed in the laboratory to isolate viable sperm for use in assisted reproductive techniques like IVF or ICSI.",
+    iconUrl: "/images/home_2/department_icon3.png",
+    number: "03",
+  },
+];
 
-const faqData1 = [
+const PesaData = [
   {
-    title: "What is IUI?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Initial Consultation and Assessment",
+    subTitle:
+      "A comprehensive evaluation of the male partner is conducted, including a review of medical history, a physical examination, and fertility testing. This is followed by a detailed discussion of the PESA procedure, covering potential risks, success rates, and expected outcomes.",
+    iconUrl: "/images/home_2/department_icon1.png",
+    number: "01",
   },
   {
-    title: "How much is the Success Rate of IUI?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Sperm Aspiration",
+    subTitle:
+      "PESA involves using a fine needle to aspirate sperm directly from the epididymis, a small organ located near the testicle, under local anesthesia or sedation. The procedure is guided by ultrasound to locate and access the epididymal tissue containing sperm.",
+    iconUrl: "/images/home_2/department_icon2.png",
+    number: "02",
   },
   {
-    title: "What is the Cost of IUI?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Sperm Retrieval and Processing",
+    subTitle:
+      "The aspirated fluid is processed in the laboratory to isolate viable sperm for use in assisted reproductive techniques like IVF or ICSI.",
+    iconUrl: "/images/home_2/department_icon3.png",
+    number: "03",
   },
+];
+const relatedBlog = [
   {
     title:
-      "When there is no Abnormality in our Tests, Why are we not having a Pregnancy?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "The Importance of Mental Health: Understanding and Managing Anxiety Disorders",
+    thumbUrl: "/images/blog/post_1.jpeg",
+    date: "March 12",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
   {
-    title: "For which Patient, IUI is Needed?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+    thumbUrl: "/images/blog/post_2.jpeg",
+    date: "March 11",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
   {
-    title: "What is Laparoscopy and who needs it?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "How is Tubal Blockage Tested?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "What to do if Sperm Count is Low?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: " Why does IVF Fail?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "What to do if IVF Fails?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
-  },
-  {
-    title: "What is the Cost of IVF treatment?",
-    content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+    thumbUrl: "/images/blog/post_3.jpeg",
+    date: "March 9",
+    btnText: "Learn More",
+    href: "/blog/blog-details",
   },
 ];
 
@@ -126,7 +141,7 @@ export default function TesaPesa() {
                     couples facing male infertility challenges.
                   </p>
 
-                  <h2>What is TESA/PESA ?</h2>
+                  <h1>What is TESA/PESA ?</h1>
                   <p>
                     TESA and PESA are minimally invasive procedures used to
                     collect sperm when there is a blockage or absence of sperm
@@ -163,7 +178,7 @@ export default function TesaPesa() {
           </div>
         </Section>
         {/* Start FAQ Section */}
-        <Section
+        {/* <Section
           topMd={190}
           topLg={145}
           topXl={105}
@@ -187,12 +202,44 @@ export default function TesaPesa() {
               />
             </div>
           </div>
+        </Section> */}
+        <Section
+          topMd={185}
+          topLg={140}
+          topXl={100}
+          // bottomMd={200}
+          // bottomLg={150}
+          // bottomXl={60}
+        >
+          <WorkingProcess
+            sectionTitle="The TESA Procedure"
+            sectionTitleUp=""
+            sectionTitleDown=""
+            sectionSubTitle=""
+            data={workingProcessData}
+          />
+        </Section>
+        <Section
+          topMd={185}
+          topLg={140}
+          topXl={40}
+          // bottomMd={200}
+          // bottomLg={150}
+          // bottomXl={110}
+        >
+          <WorkingProcess
+            sectionTitle="The PESA Procedure"
+            sectionTitleUp=""
+            sectionTitleDown=""
+            sectionSubTitle=""
+            data={PesaData}
+          />
         </Section>
         {/* End FAQ Section */}
         <Section
-          topMd={100}
-          topLg={100}
-          topXl={110}
+          topMd={185}
+          topLg={140}
+          topXl={40}
           bottomMd={200}
           bottomLg={150}
           bottomXl={110}
@@ -281,6 +328,21 @@ export default function TesaPesa() {
             </div>
           </div>
         </Section>
+        <Section bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}>
+          <div className="container">
+        <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
+          <Spacing md="57" />
+          <div className="row cs_gap_y_40">
+            {relatedBlog?.map((item, index) => (
+              <div className="col-xl-4 col-md-6" key={index}>
+                <Post {...item} />
+              </div>
+            ))}
+          </div>
+          </div>
+          </Section>
       </Container>
     </>
   );

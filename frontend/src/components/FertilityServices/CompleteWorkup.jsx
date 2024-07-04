@@ -36,28 +36,28 @@ const relatedBlog = [
 ];
 const faqData = [
   {
-    title: "What is a complete fertility workup?",
+    title: "What is a complete fertility workup ?",
     content:
       "A complete fertility workup is a comprehensive evaluation of both partners' reproductive health to identify potential causes of infertility. It includes a series of diagnostic tests, physical examinations, and medical history reviews to provide a thorough understanding of factors affecting fertility and to develop an effective treatment plan.",
   },
   {
-    title: "What tests are included in a complete fertility workup?",
+    title: "What tests are included in a complete fertility workup ?",
     content:
-      "A complete fertility workup typically includes, for women: blood tests, ultrasound scans, HSG, and possibly laparoscopy or hysteroscopy, and for men: semen analysis, blood tests, and possibly a physical examination or ultrasound.",
+      "A complete fertility workup typically includes, for women : blood tests, ultrasound scans, HSG, and possibly laparoscopy or hysteroscopy, and for men : semen analysis, blood tests, and possibly a physical examination or ultrasound.",
   },
   {
-    title: "How long does a complete fertility workup take?",
+    title: "How long does a complete fertility workup take ?",
     content:
       "The duration of a complete fertility workup can vary depending on the specific tests required and the individual's health condition. Generally, the workup can take several weeks to complete, as some tests are performed at specific times during a woman’s menstrual cycle. Your fertility specialist will provide a detailed timeline based on your personalized evaluation plan.",
   },
   {
-    title: "Why is a complete fertility workup important?",
+    title: "Why is a complete fertility workup important ?",
     content:
       "A complete fertility workup is essential because it helps identify the underlying causes of infertility, allowing for a targeted and effective treatment plan. By understanding the specific factors affecting fertility, our specialists can recommend the most appropriate interventions, increasing the chances of successful conception and a healthy pregnancy.",
   },
   {
     title:
-      "What should I expect during my first visit for a complete fertility workup?",
+      "What should I expect during my first visit for a complete fertility workup ?",
     content:
       "During your first visit, you’ll receive a comprehensive medical history review, a detailed physical examination, and initial test recommendations to kickstart your fertility evaluation. You’ll also get a clear overview of the entire workup process, including what additional tests might be needed, the timeline for results, and the next steps for your treatment plan.",
   },
@@ -286,25 +286,25 @@ export default function CompleteWorkup() {
                   </p>
 
                   <li>
-                    Lifestyle Modifications: Recommendations on diet, exercise,
+                    <b>Lifestyle Modifications : </b>Recommendations on diet, exercise,
                     and stress management <br />
                     <span className="margin"></span>
                     to improve overall health and fertility.{" "}
                   </li>
                   <li>
-                    Medications: Prescribing hormonal treatments or other
+                    <b>Medications : </b>Prescribing hormonal treatments or other
                     medications to address <br />
                     <span className="margin"></span> specific conditions such as
                     PCOS or thyroid dysfunction.
                   </li>
                   <li>
-                    Surgical Interventions: If structural issues are identified,
+                    <b>Surgical Interventions : </b>If structural issues are identified,
                     minimally invasive <br />
                     <span className="margin"></span> surgical procedures may be
                     recommended to correct abnormalities.
                   </li>
                   <li>
-                    Assisted Reproductive Technologies (ART): For those
+                    <b>Assisted Reproductive Technologies (ART) : </b>For those
                     requiring advanced
                     <br />
                     <span className="margin"></span> treatments, options such as
@@ -314,7 +314,7 @@ export default function CompleteWorkup() {
                     conception.
                   </li>
                   <li>
-                    Male Fertility Treatments: For couples where male factor
+                    <b>Male Fertility Treatments : </b>For couples where male factor
                     infertility is identified,
                     <br />
                     <span className="margin"></span> treatments such as sperm
