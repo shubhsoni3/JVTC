@@ -178,31 +178,7 @@ export default function TesaPesa() {
           </div>
         </Section>
         {/* Start FAQ Section */}
-        {/* <Section
-          topMd={190}
-          topLg={145}
-          topXl={105}
-          bottomMd={200}
-          bottomLg={150}
-          bottomXl={110}
-        >
-          <div className="row">
-            <div className="col-xxl-6">
-              <FaqSectionStyle2
-                data={faqData}
-                sectionTitle="Usually Asked"
-                sectionTitleUp="What People"
-              />
-            </div>
-            <div className="col-xxl-6">
-              <FaqSectionStyle2
-                data={faqData1}
-                sectionTitle="Usually Asked"
-                sectionTitleUp="What People"
-              />
-            </div>
-          </div>
-        </Section> */}
+        
         <Section
           topMd={185}
           topLg={140}

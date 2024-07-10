@@ -8,22 +8,31 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const menuDataOne = [
+  { title: "Home", href: "/" },
   { title: "About Us", href: "/about" },
-  { title: "Departments", href: "/departments" },
-  { title: "Doctors", href: "/doctors" },
-  { title: "Timetable", href: "/timetable" },
+  { title: "Doctors", href: "/doctors/doctor-details" },
+  { title: "Gallery", href: "/gallery" },
   { title: "Appointment", href: "/appointments" },
 ];
 
 const menuDataTwo = [
-  { title: "Testimonials", href: "/" },
+  { title: "Your Querise", href: "/Querise" },
+  { title: "Are You Want Solution", href: "/Solution" },
+  { title: "Patient Review", href: "/Review" },
   { title: "Blog", href: "/blog" },
-  { title: "Contact Us", href: "/" },
-  { title: "FAQs", href: "/" },
+  { title: "Contact Us", href: "/contact" },
+];
+const menuDataFour = [
+  { title: "Counslling", href: "/Counselling" },
+  { title: "Complete Fertility Workup", href: "/CompleteWorkup" },
+  { title: "IVF", href: "/IVF" },
+  { title: "Hysteroscopy & Laparoscopy Treatment", href: "/Hysteroscopy" },
+  { title: "ICSI", href: "/ICSI" },
+  { title: "Laparoscopic Removal", href: "/LaparoscopyRemoval" },
 ];
 const menuDataThree = [
   { title: "Privacy Policy", href: "/" },
-  { title: "Terms and Conditions", href: "/blog" },
+  { title: "Terms and Conditions", href: "/" },
 ];
 
 export default function FooterStyle4() {
@@ -37,6 +46,7 @@ export default function FooterStyle4() {
           <TextWidget
             logoUrl="/images/logofooter1.png"
             text="Fertility Clicic & Test Tube Baby Center"
+            // heading= "JABALPUR IVF CENTER"
           />
           <div className="Footers">
             <NewsletterStyle4 title="JABALPUR IVF CENTER" subTitle="" />
@@ -55,6 +65,11 @@ export default function FooterStyle4() {
             <div className="cs_footer_col">
               <div className="cs_footer_item">
                 <MenuWidget data={menuDataTwo} />
+              </div>
+            </div>
+            <div className="cs_footer_col">
+              <div className="cs_footer_item">
+                <MenuWidget data={menuDataFour} />
               </div>
             </div>
             <div className="cs_footer_col">

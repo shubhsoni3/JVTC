@@ -9,6 +9,8 @@ import Sidebar from "../Sidebar/Laparoscopy";
 import { pageTitle } from "../../helpers/PageTitle";
 import styled from "styled-components";
 import FaqSection from "../Section/FaqSection";
+import WorkingProcess from "../Section/WorkingProcess";
+import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
 const relatedBlog = [
   {
     title:
@@ -35,27 +37,60 @@ const relatedBlog = [
 ];
 const faqData = [
   {
-    title: "Why does a woman need a laparoscopy?",
+    title: " What are hysteroscopy and laparoscopy, and how are they used in fertility treatments ?",
     content:
-      "They need it to identify the stage of diseases like cancer in any abdominal organ or for an injury like free air in the diaphragm.",
+      "Hysteroscopy and laparoscopy are minimally invasive surgical procedures used to diagnose and treat conditions affecting fertility. Hysteroscopy involves inserting a thin, lighted tube (hysteroscope) through the cervix to examine the inside of the uterus, diagnosing and treating abnormalities such as polyps, fibroids, and adhesions. Laparoscopy involves inserting a thin, lighted tube (laparoscope) through a small incision in the abdomen to examine the pelvic organs, diagnosing and treating conditions like endometriosis, ovarian cysts, and tubal blockages.",
   },
   {
-    title: "What is the success ratio for laparoscopy surgery?",
+    title: "What conditions can be diagnosed or treated with hysteroscopy and laparoscopy ?",
     content:
-      "If performed by experienced endoscopists and laparoscopy surgeons, then it has a success ratio of 94%.",
+      "Both procedures can address a variety of fertility-related conditions. Hysteroscopy can diagnose and treat uterine polyps, fibroids, uterine adhesions (Asherman’s syndrome), congenital uterine abnormalities, and abnormal uterine bleeding. Laparoscopy can diagnose and treat endometriosis, ovarian cysts, pelvic adhesions, tubal blockages, ectopic pregnancy, and unexplained infertility.",
   },
   {
-    title: "For how long does laparoscopy pain last?",
-    content: "It usually lasts around 1-2 days in your belly & shoulders.",
+    title: "What is the recovery time for hysteroscopy and laparoscopy ?",
+    content: "Recovery times for both procedures are relatively short but can vary. Hysteroscopy is generally performed as an outpatient procedure, with most patients returning to normal activities within a day or two, though mild cramping and spotting may occur for a few days post-procedure. Laparoscopy is usually performed as an outpatient procedure, sometimes requiring an overnight stay. Most patients can return to light activities within a week, with full recovery typically taking 1-2 weeks depending on the extent of the surgery. Some shoulder pain may occur due to the gas used to inflate the abdomen during the procedure.",
   },
   {
-    title: "Can we bathe after the surgery?",
+    title: "Are there any risks or complications associated with hysteroscopy and laparoscopy ?",
     content:
-      "Yes, you can usually bathe after undergoing laparoscopic surgery.",
+      "Both procedures are generally safe but carry some risks. Hysteroscopy risks include infection, uterine perforation (rare), bleeding, and adverse reaction to anesthesia. Laparoscopy risks include infection, bleeding, injury to surrounding organs (bladder, bowel, blood vessels), adverse reaction to anesthesia, and rare blood clots.",
   },
   {
-    title: "Can we drive immediately after the surgery?",
-    content: "It’s recommended not to drive for atleast 48 hours post-surgery.",
+    title: " How should I prepare for hysteroscopy and laparoscopy ?",
+    content: "Proper preparation can help ensure a smooth procedure and recovery. For hysteroscopy, follow pre-procedure instructions regarding fasting and medication adjustments, arrange for someone to drive you home after the procedure, and inform your doctor of any allergies or medications you are taking. For laparoscopy, follow pre-procedure instructions regarding fasting and medication adjustments, arrange for someone to drive you home and assist you post-procedure, wear loose, comfortable clothing to the procedure, and inform your doctor of any medical conditions, allergies, or medications you are taking.",
+  },
+];
+const workingProcessData = [
+  {
+    title: "Diagnostic Hysteroscopy",
+    subTitle:
+      "Insertion of a hysteroscope through the cervix into the uterus to examine the uterine cavity involves visual inspection of the endometrium and identification of any abnormalities.",
+    iconUrl: "/images/home_2/department_icon1.png",
+    number: "01",
+  },
+  {
+    title: "Sperm Aspiration",
+    subTitle:
+      "In cases where abnormalities such as polyps or fibroids are detected, surgical instruments can be passed through the hysteroscope to remove or treat these lesions, offering a minimally invasive approach with a shorter recovery time compared to traditional surgery.",
+    iconUrl: "/images/home_2/department_icon2.png",
+    number: "02",
+  },
+];
+
+const PesaData = [
+  {
+    title: "Diagnostic Laparoscopy",
+    subTitle:
+      "Insertion of a laparoscope through a small incision near the navel allows visualization of the pelvic organs, enabling examination of the uterus, fallopian tubes, ovaries, and surrounding structures for abnormalities.",
+    iconUrl: "/images/home_2/department_icon1.png",
+    number: "01",
+  },
+  {
+    title: "Operative Laparoscopy",
+    subTitle:
+      "Performance of surgical procedures such as ovarian cystectomy, treatment of endometriosis, or tubal reanastomosis is achieved through additional small incisions, using precise surgical instruments to minimize trauma and scarring.",
+    iconUrl: "/images/home_2/department_icon2.png",
+    number: "02",
   },
 ];
 
@@ -65,7 +100,7 @@ export default function BlogDetails() {
     <>
       <Container>
         <Section topMd={170} bottomMd={54} bottomLg={54}>
-          <BreadcrumbStyle3 title="Laparoscopy Treatment " />
+          <BreadcrumbStyle3 title="Hysteroscopy and Laparoscopy Treatment " />
         </Section>
         <div className="container">
           <div className="cs_blog_details_info">
@@ -94,223 +129,186 @@ export default function BlogDetails() {
           <div className="row">
             <div className="col-lg-8">
               <div className="cs_blog_details">
-                <h2>What is Laparoscopy Treatment </h2>
+                
+                <h3>Advanced Diagnostic and Surgical Techniques at Jabalpur Fertility Centre</h3>
                 <p>
-                  Laparoscopy is a crucial procedure for evaluating women
-                  suffering from infertility. During laparoscopy, small tubes
-                  are inserted into the abdomen, allowing direct visualization
-                  of the uterus, ovaries, and surrounding structures. This
-                  technique can diagnose and treat many causes of infertility,
-                  including fibroids, ovarian cysts, endometriosis, and tubal
-                  blockages. <br />
-                  <br />
-                  However, it's essential to recognize that these types of
-                  surgeries require extensive skill and expertise. A single
-                  error can lead to severe complications. <br />
-                  <br />
-                  At Jabalpur Fertility, you are in safe hands. Our highly
-                  trained surgeons have the expertise to provide you with the
-                  best possible treatment. When it comes to laparoscopic
-                  surgery, we are the experts in the field. And the results?
-                  They speak for themselves!
+                Hysteroscopy and laparoscopy are advanced minimally invasive procedures used for both diagnostic evaluation and surgical treatment of various gynecological conditions. At Jabalpur Fertility Centre, recognized as the Best Fertility Clinic in Jabalpur, we offer comprehensive hysteroscopy and laparoscopy services under the expert guidance of Dr. Archana Shrivastav, the Best IVF Doctor in Jabalpur. Our mission is to provide personalized, compassionate care and effective solutions for women’s health issues.
                 </p>
 
                 <h2>
-                  Here are six exciting laparoscopic procedures you should know
-                  about:
+                What is Hysteroscopy?
                 </h2>
+                <p>Hysteroscopy is a procedure that allows a doctor to examine the inside of the uterus (endometrial cavity) using a thin, lighted instrument called a hysteroscope. This procedure can be both diagnostic and therapeutic, enabling visualization and treatment of various uterine conditions.</p>
+                <h3>When is Hysteroscopy Recommended?</h3>
                 <ol>
                   <p>
-                    <b>1. Laparoscopic Colectomy </b>
-                    <br />
-                    <p>
-                      In this procedure, a part of the large intestine (colon)
-                      is removed surgically to treat numerous colorectal
-                      diseases like:
-                      <li>Colon cancer.</li>
-                      <li>Diverticulitis</li>
-                      <li>Chronic ulcerative colitis</li>
-                      <li>And Crohn’s Disease.</li>
-                    </p>
+                    <b>Abnormal Uterine Bleeding : </b>
+                    Evaluation and treatment of abnormal menstrual bleeding.
                   </p>
                   <p>
-                    <b>2. Laparoscopic Cholecystectomy</b> <br />
-                    It’s a surgery performed to remove the gallbladder.
+                    <b>Recurrent Miscarriages : </b>
+                    Investigation of uterine abnormalities that may contribute to recurrent miscarriages.
                   </p>
                   <p>
-                    <b>3. Laparoscopic Appendectomy</b> <br />
-                    Instead of making one large incision, the doctors make
-                    several small ones to remove the appendix.
+                    <b>Uterine Polyps or Fibroids : </b>
+                    Removal of polyps or fibroids that may affect fertility or cause abnormal bleeding.
                   </p>
                   <p>
-                    <b>4. Laparoscopic Hernia Repair</b> <br />
-                    With general anaesthesia’s help and three half-inch
-                    incisions, the doctor removes the hernia sac from the
-                    abdominal wall and covers it with prosthetic mesh.
+                    <b>Adhesions (Asherman’s Syndrome) : </b>
+                    Diagnosis and treatment of intrauterine adhesions that can result from previous surgeries or infections.
                   </p>
                   <p>
-                    <b>5. Laparoscopic Splenectomy</b> <br />
-                    This surgery is performed to remove the spleen.
-                  </p>
-                  <p>
-                    <b>6. Laparoscopic Adhesiolysis</b> <br />
-                    In this surgery, the adhesions are removed either by:
-                    <li>Cutting them (off by scalpel) or </li>
-                    <li>By releasing them to free the joined organs.</li>
+                    <b>Evaluation Prior to IVF : </b>
+                    Assessment of the uterine cavity before undergoing IVF treatment.
                   </p>
                 </ol>
-                <h2>Cost of Laparoscopy Surgery:</h2>
-                <p>
-                  A Hysteroscopy costs about 30,000 INR to 40,000 INR and may
-                  vary based on the patient’s condition, the abnormality
-                  diagnosed, and the treatment required.
-                </p>
-                <h2>Treatment/Testing Of Hysteroscopy:</h2>
-                <p>
-                  <b>
-                    The cost of laparoscopic surgery and its types is around:
-                  </b>
-                  <li>
-                    {" "}
-                    <b>Rs. 50,000 – Rs. 4,90,000</b> for laparoscopic surgery.
-                  </li>
-                  <li>
-                    Cholecystectomy surgery costs between
-                    <b> Rs. 90,000 – Rs. 2,60,000.</b>
-                  </li>
-                  <li>
-                    Hernia repair costs between{" "}
-                    <b> Rs. 70,000 – Rs. 1,10,000. </b>
-                  </li>
-                  <li>
-                    The cost of appendectomy surgery lies between{" "}
-                    <b> Rs. 40, 000 – Rs. 70,000.</b>
-                  </li>
-                  <li>
-                    The average expense of laparoscopic splenectomy lies between{" "}
-                    <b> Rs. 42,000 – Rs. 1,30,000.</b>
-                  </li>
-                  <li>
-                    The average cost of a hysterectomy surgery lies between{" "}
-                    <b> Rs. 55,000 – Rs. 75,000.</b>
-                  </li>
-                  <li>
-                    Lastly, the cost of this myomectomy procedure ranges between{" "}
-                    <b> Rs. 65,000 to Rs. 1,00,000.</b>
-                  </li>
-                </p>
-                <p>
-                  Besides these numerals, there are other aspects as well that
-                  also influence the surgery’s price :
-                  <li>Doctor’s and admission fee.</li>
-                  <li>Patient’s age.</li>
-                  <li>The medical condition of the patient</li>
-                  <li>Post-surgical complications, if any.</li>
-                  <li>Admission room you prefer</li>
-                  <li>
-                    And lab or examination tests like blood tests, X-rays,
-                    ultrasound, MRI scans, ECG, etc.
-                  </li>
-                </p>
 
-                <h2>Treatment/Testing of Laparoscopy</h2>
-                <p>
-                  Before diagnosing laparoscopic surgery, there are some tests
-                  that your gynaecologists may ask you to perform to know your
-                  medical status:
-                  <li>Pathology reports.</li>
-                  <li>Lab test reports.</li>
-                  <li>Earlier X-rays if done from other facilities.</li>
-                  <li>Samples of tissues.</li>
-                  <li>Operative report.</li>
-                  <li>CT scan.</li>
-                  <li>Ultrasound.</li>
-                  <li>And MRI.</li>
-                </p>
-                <p>
-                  Once the reports are in hand, here’s what happens during the
-                  treatment-
-                  <li>
-                    When you’re on the operating bed, your anaesthetist inserts
-                    a cannula that puts you to sleep, relaxes your muscles, and
-                    keeps you away from the pain.
-                  </li>
-                </p>
-                <p>
-                  After that, your OBGYN makes 2-3 minor cuts around 1-1.3
-                  inches:
-                  <li>Near your belly button.</li>
-                  <li>And the other on both sides of your abdomen.</li>
-                </p>
-                <p>
-                  Once this is done, the OBGYN fills your stomach with carbon
-                  dioxide, which makes it easy for them to see your organs.
-                  <li>
-                    After that, ports are placed on one of the cuts, making it
-                    easy for the laparoscope to pass inside.
-                  </li>
-                  <li>
-                    If needed, various other surgical instruments are also used
-                    during the surgery.
-                  </li>
-                  <li>
-                    With the help of the television screen, your OBGYN can
-                    quickly determine the extent of the problem (fibroids,
-                    diseased organ, hernia, ovarian cysts, endometriosis, tubal
-                    blockage, etc.) and execute that particular surgery.
-                  </li>
-                  <li>
-                    Once the treatment is done, the laparoscope tube, along with
-                    all the surgical instruments and gas, are removed.
-                  </li>
-                  <li>
-                    Then, all the tiny incisions (holes) are closed with
-                    stitches and bandages.
-                  </li>
-                </p>
-                <p>
-                  <b>
-                    Note: The procedure is done under anesthesia and so is
-                    completely painless for the patient. It usually requires one
-                    more day admission and the patient can get back their usual
-                    work within 2 to 3 days of the surgery.
-                  </b>
-                </p>
+               {/* Start FAQ Section */} 
+                <Section
+          topMd={15}
+          topLg={10}
+          topXl={10}
+          bottomMd={100}
+          bottomLg={75}
+          bottomXl={55}
+        >
+          <WorkingProcess
+            sectionTitle="The Hysteroscopy Procedure"
+            sectionTitleUp=""
+            sectionTitleDown=""
+            sectionSubTitle=""
+            data={workingProcessData}
+          />
+        </Section>
+        {/* End FAQ Section */}
                 <h2>
-                  Why Is Jabalpur Fertility Center For Laparoscopy In Jabalpur
-                  The Best?
+                What is Laparoscopy ?
                 </h2>
-                <p>
-                  Besides treating other ailments,{" "}
-                  <b>
-                    {" "}
-                    women who are undergoing IVF also require laparoscopy to
-                    increase the success rate of the IVF procedure. Your
-                    fertility specialist will discuss this with you. In case you
-                    need a laparoscopy. The best IVF centres have their IVF unit
-                    and laparoscopy unit in the same place to give comprehensive
-                    treatment to the patient. And Jabalpur Fertility Center has
-                    an advanced and equipped IVF Lab and Laparoscopy Unit inside
-                    the Fertility Clinic.
-                  </b>
-                </p>
+                <p>Laparoscopy, also known as minimally invasive surgery or keyhole surgery, involves examining and treating pelvic organs through small incisions using a laparoscope (a thin, lighted instrument with a camera). This technique allows for precise diagnosis and treatment of various gynecological conditions.</p>
+                <h3>When is Laparoscopy Recommended ? </h3>
+                <ol>
+                  <p>
+                    <b>Endometriosis : </b>
+                    Diagnosis and surgical management of endometriosis, a condition where tissue similar to the lining of the uterus grows outside the uterus.
+                  </p>
+                  <p>
+                    <b>Ovarian Cysts : </b>
+                    Removal of benign ovarian cysts that may affect fertility or cause pain.
+                  </p>
+                  <p>
+                    <b>Tubal Reversal Surgery : </b>
+                    Reversal of tubal ligation or surgical repair of fallopian tubes.
+                  </p>
+                  <p>
+                    <b>Evaluation of Infertility : </b>
+                    Assessment of pelvic anatomy and detection of conditions like adhesions, pelvic inflammatory disease (PID), or ovarian disorders.
+                  </p>
+                  <p>
+                    <b>Hysterectomy : </b>
+                    Removal of the uterus (total laparoscopic hysterectomy) or part of the uterus (laparoscopic myomectomy) for certain medical conditions.
+                  </p>
+                </ol>
+
+         {/* Start FAQ Section */}
+        <Section
+          topMd={15}
+          topLg={10}
+          topXl={10}
+          // bottomMd={200}
+          // bottomLg={150}
+          // bottomXl={110}
+        >
+          <WorkingProcess
+            sectionTitle="The Laparoscopy Procedure"
+            sectionTitleUp=""
+            sectionTitleDown=""
+            sectionSubTitle=""
+            data={PesaData}
+          />
+        </Section>
+
+        {/* End FAQ Section */}
               </div>
               <Spacing md="85" />
             </div>
             <div className="col-lg-4">
+              <h2 className="d-flex justify-content-center">Hysteroscopy</h2>
               <Sidebar />
             </div>
-            <div className="col-lg-12">
-              <Section>
-                <FaqSection
-                  data={faqData}
-                  sectionTitle="Frequently Asked <br />Questions"
-                />
-              </Section>
+
+            <Section
+          topMd={100}
+          topLg={100}
+          topXl={110}
+          bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}
+        >
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-12">
+                <div className="cs_blog_details">
+                  <h2>Benefits of Hysteroscopy and Laparoscopy</h2>
+                  <p>
+                    <li>
+                      <b>Minimally Invasive :</b> Small incisions lead to faster recovery, less pain, and reduced risk of infection compared to traditional open surgery.
+                    </li>
+                    <li>
+                      <b>Precise Diagnosis : </b>Detailed visualization of pelvic structures allows for accurate diagnosis of gynecological conditions.
+                    </li>
+                    <li>
+                      <b>Effective Treatment :</b> Many conditions can be treated during the same procedure, minimizing the need for additional surgeries.
+                    </li>
+                    <li>
+                      <b>Shorter Hospital Stay :</b> Most procedures are performed on an outpatient basis, allowing patients to return home the same day.
+                    </li>
+                  </p>
+
+                  <h2>Why Choose Jabalpur Fertility Centre for Hysteroscopy and Laparoscopy ?</h2>
+                  
+                  <li>
+                    <b>Expertise and Experience : </b>
+                    Led by Dr. Archana Shrivastav, our team has extensive experience in performing successful hysteroscopy and laparoscopy procedures.
+                  </li>
+                  <li>
+                    <b>State-of-the-Art Facility : </b>
+                    F Equipped with advanced technology and facilities to ensure the highest standards of care and safety.
+                  </li>
+                  <li>
+                    <b>Comprehensive Gynecological Services : </b>
+                    From initial consultation and diagnostic evaluation to minimally invasive surgery and post-operative care, we offer complete gynecological care.
+                  </li>
+                  <li>
+                    <b>Patient-Centered Approach : </b>
+                    We prioritize your comfort and well-being, offering
+                    compassionate support throughout your fertility journey.
+                  </li>
+                  <Section topMd={165} topLg={125} topXl={70}>
+                    <FaqSectionStyle4
+                      sectionTitle="Frequently Asked Questions"
+                      data={faqData}
+                      faqImgUrl="/images/home_4/faq_img.jpeg"
+                      spiningImgUrl="/images/home_1/about_mini.svg"
+                    />
+                  </Section>
+
+                  <br />
+                  <br />
+                  <h1>Contact Us</h1>
+                  <p>
+                  If you require hysteroscopy or laparoscopy for diagnostic evaluation or treatment of gynecological conditions, contact Jabalpur Fertility Centre today. Our dedicated team is here to provide expert care and support to address your health needs effectively.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <Spacing md="135" lg="100" />
-          <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
+        </Section>
+
+        <Section bottomMd={200}
+          bottomLg={150}
+          bottomXl={110}>
+          <div className="container">
+        <h2 className="mb-0 cs_fs_40 cs_medium">Related Articles</h2>
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
@@ -319,8 +317,10 @@ export default function BlogDetails() {
               </div>
             ))}
           </div>
+          </div>
+          </Section>
+          </div>
         </div>
-        <Spacing md="200" xl="150" lg="110" />
       </Container>
     </>
   );

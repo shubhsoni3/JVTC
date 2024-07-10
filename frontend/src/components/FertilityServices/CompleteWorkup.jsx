@@ -166,7 +166,7 @@ export default function CompleteWorkup() {
                     utilizes advanced diagnostic techniques to ensure a precise
                     and comprehensive evaluation of your fertility health.
                   </p>
-                  <h2>What is a Complete Fertility Workup?</h2>
+                  <h1>What is a Complete Fertility Workup?</h1>
                   <p>
                     A complete fertility workup is an extensive series of tests
                     and evaluations designed to identify any factors that may be

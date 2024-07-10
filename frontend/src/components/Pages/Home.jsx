@@ -68,16 +68,6 @@ const featureListData = [
     Name: "Preeti Singh",
   },
 ];
-// const brandData = [
-//   { imgUrl: "images/brand_1.png", imgAlt: "Brand" },
-//   { imgUrl: "images/brand_2.png", imgAlt: "Brand" },
-//   { imgUrl: "images/brand_3.png", imgAlt: "Brand" },
-//   { imgUrl: "images/brand_4.png", imgAlt: "Brand" },
-//   { imgUrl: "images/brand_5.png", imgAlt: "Brand" },
-//   { imgUrl: "images/brand_6.png", imgAlt: "Brand" },
-//   { imgUrl: "images/brand_7.png", imgAlt: "Brand" },
-//   { imgUrl: "images/brand_8.png", imgAlt: "Brand" },
-// ];
 
 const faqData = [
   {
@@ -134,39 +124,54 @@ const blogData = [
 ];
 const departmentData = [
   {
-    title: "Emergency Department",
+    title: "Counslling",
     iconUrl: "images/home_1/department_icon_1.svg",
-    href: "/departments/department-details",
+    href: "/Counselling",
   },
   {
-    title: "Pediatric Departement",
+    title: "Complete Fertility Workup",
     iconUrl: "images/home_1/department_icon_2.svg",
-    href: "/departments/department-details",
+    href: "/CompleteWorkup",
   },
   {
-    title: "Gynecology Department",
-    iconUrl: "images/home_1/department_icon_3.svg",
-    href: "/departments/department-details",
-  },
-  {
-    title: "Cardiology Department",
-    iconUrl: "images/home_1/department_icon_4.svg",
-    href: "/departments/department-details",
-  },
-  {
-    title: "Neurology Department",
+    title: "IUI",
     iconUrl: "images/home_1/department_icon_5.svg",
-    href: "/departments/department-details",
+    href: "/IUI",
   },
   {
-    title: "Psychiatry Department",
+    title: "IVF",
+    iconUrl: "images/home_1/department_icon_3.png",
+    href: "/IVF",
+  },
+  {
+    title: "ICSI",
+    iconUrl: "images/home_1/department_icon_7.svg",
+    href: "/ICSI",
+  },
+  {
+    title: "EmbryoDonation",
+    iconUrl: "images/home_1/department_icon_5.svg",
+    href: "/EmbryoDonation",
+  },
+  {
+    title: "Hysteroscopy & Laparoscopy Treatment",
+    iconUrl: "images/home_1/department_icon_4.svg",
+    href: "/Laparoscopy",
+  },
+  {
+    title: "Tesa / Pesa",
+    iconUrl: "images/home_1/department_icon_3.svg",
+    href: "/TesaPesa",
+  },
+  {
+    title: "Laparoscopic Removal",
     iconUrl: "images/home_1/department_icon_6.svg",
-    href: "/departments/department-details",
+    href: "/LaparoscopyRemoval",
   },
 ];
 const teamData = [
   {
-    imgUrl: "images/about/DrShrivastavMaam.jpg",
+    imgUrl: "images/about/DrArchnaShrivastav.JPG",
     name: "Dr. Archana Shrivastav MBBS , DGO",
     // designation: "Emergency Medicine Physician",
     description:
@@ -187,11 +192,12 @@ const funFactData = [
 ];
 
 export default function Home() {
+
   pageTitle("Home");
   return (
     <>
       <Container>
-        {/* Start About Section */}
+        {/* Start Hero Section */}
         <Hero
           title="SPREADING THE JOY OF MOTHERHOOD"
           subTitle="We are committed to providing the best technology to achieve great results in IVF and fertility treatments for infertile couples in our city and beyond."
@@ -228,7 +234,7 @@ export default function Home() {
         <Section>
           <div className="mt-lg-5">
             <AboutSection
-              imgUrl="/images/home_1/AboutIVF.png"
+              imgUrl="/images/home_1/AboutJBpIVF.png"
               spiningImgUrl="/images/home_1/about_mini.svg"
               title="About"
               subTitle="Jabalpur Fertility Center"
@@ -253,18 +259,9 @@ export default function Home() {
             data={funFactData}
           />
         </Section>
-
-        {/* <Section>
-        <Banner
-          bgUrl="images/home_1/cta_bg.svg"
-          imgUrl="images/home_1/cta_img.png"
-          title="Don’t Let Your Health Take a Backseat!"
-          subTitle="Schedule an appointment with one of our experienced medical professionals today!"
-        />
-      </Section> */}
         {/* End Banner Section */}
 
-        {/* Start Feature Section */}
+        {/* Start Why Choose US Section */}
         <Section
           topMd={185}
           topLg={140}
@@ -279,18 +276,7 @@ export default function Home() {
             data={featureListData}
           />
         </Section>
-
-        {/* <Section
-        topMd={185}
-        topLg={140}
-        topXl={100}
-        bottomMd={185}
-        bottomLg={140}
-        bottomXl={100}
-      >
-        <FeaturesSection sectionTitle="Our Values" data={featureListData} />
-      </Section> */}
-        {/* End Feature Section */}
+        {/* End Why Choose US Section */}
 
         {/* Start Departments Section */}
         <Section topMd={185} topLg={150} topXl={110}>
@@ -302,12 +288,6 @@ export default function Home() {
           />
         </Section>
         {/* End Departments Section */}
-
-        {/* Start Award Section */}
-        {/* <Section topMd={185} topLg={140} topXl={100}>
-          <AwardSection sectionTitle="Departments" data={awardData} />
-        </Section> */}
-        {/* End Award Section */}
 
         {/* Start Doctor Section */}
         <Section
@@ -328,7 +308,6 @@ export default function Home() {
         {/* End Doctor Section */}
 
         {/* Start Testimonial */}
-
         <Section
           style={{
             background:
@@ -343,37 +322,6 @@ export default function Home() {
             data={featureListData}
           />
         </Section>
-
-        {/* Will Be Removing Testimonial */}
-        {/* <Section
-        topMd={190}
-        topLg={145}
-        topXl={105}
-        bottomMd={200}
-        bottomLg={150}
-        bottomXl={110}
-      >
-        <TestimonialSectionStyle3
-          sectionTitle="What Our Patients Say <br />About Us"
-          sectionTitleUp="TESTIMONIALS"
-          data={testimonialData}
-        />
-      </Section> */}
-
-        {/* Will Be Removing Testimonial */}
-        {/* <Section
-        topMd={185}
-        topLg={140}
-        topXl={100}
-        bottomMd={200}
-        bottomLg={150}
-        bottomXl={110}
-      >
-        <TestimonialSection
-          sectionTitle="Some Reviews"
-          sectionTitleDown="Of our clients"
-        />
-      </Section> */}
         {/* End Testimonial */}
 
         {/* Start Blog Section */}
@@ -397,7 +345,6 @@ export default function Home() {
         {/* End Appointment Section */}
 
         {/* Start FAQ Section */}
-
         <Section topMd={185} topLg={145} topXl={105}>
           <FaqSectionStyle4
             sectionTitle="Frequently Asked <br />Questions"
@@ -406,29 +353,7 @@ export default function Home() {
             spiningImgUrl="/images/home_1/about_mini.svg"
           />
         </Section>
-
-        {/* Will Be Deleted This Section */}
-        {/* <Section topMd={190} topLg={145} topXl={105}>
-        <FaqSection
-          data={faqData}
-          sectionTitle="Usually Asked"
-          sectionTitleUp="What People"
-        />
-      </Section> */}
         {/* End FAQ Section */}
-
-        {/* Start Brand Section */}
-        {/* <Section
-        topMd={200}
-        topLg={150}
-        topXl={110}
-        bottomMd={200}
-        bottomLg={100}
-        bottomXl={50}
-      >
-        <BrandsSection data={brandData} />
-      </Section> */}
-        {/* End Brand Section */}
 
         {/* {Start Contact Map} */}
         <Section

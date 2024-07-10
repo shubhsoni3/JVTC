@@ -16,6 +16,7 @@ const categoryData = [
   //   url: "/",
   // },
 
+  { image: "/images/blog/hysteroscopy.jpg" },
   { image: "/images/blog/Laparoscopic-surgery.png" },
 ];
 const recentPostData = [

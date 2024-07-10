@@ -110,7 +110,7 @@ export default function EmbryoDonation() {
           bgUrl="/images/about/AboutBanner_bg.png"
           // imgUrl="/images/about/banner_img.png"
           title="Welcome to Jabalpur<br /> Fertility Center"
-          subTitle="Your Querise"
+          subTitle="Embryo Donation"
         />
 
         <Section topMd={200} topLg={150} topXl={110}>

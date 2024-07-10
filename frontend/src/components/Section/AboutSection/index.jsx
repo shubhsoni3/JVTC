@@ -42,7 +42,7 @@ export default function AboutSection({
               {/* <Spacing md="72" lg="72" /> */}
               <ul className="cs_about_text_list">
                 {featureList.map((item, index) => (
-                  <li key={index}>
+                  <p key={index}>
                     {/* <i className="cs_accent_color">
                       <svg
                         width={35}
@@ -61,7 +61,7 @@ export default function AboutSection({
                       {item.featureListTitle}
                     </h3>
                     <p className="m-0">{item.featureListSubTitle}</p>
-                  </li>
+                  </p>
                 ))}
               </ul>
             </div>

@@ -4,6 +4,7 @@ import VideoModal from "../VideoModal";
 import { Link } from "react-router-dom";
 import ReactDatePicker from "react-datepicker";
 import styled from "styled-components";
+import axios from "axios";
 
 export default function Hero({
   title,
@@ -23,6 +24,46 @@ export default function Hero({
   const handleDateChange = (date) => {
     setSelectedDate(date);
     // You can add any additional logic here, such as updating form data
+  };
+
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    date: "",
+  });
+
+  // Handler for input field changes
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+
+  console.log(formData);
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        "http://drashishcardio.com/api/auth/appointment",
+        formData
+      );
+      if (response.status === 200) {
+        alert("Data saved and email sent successfully");
+
+        setFormData({ name: "",phone: "", date: ""});
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Error occurred while sending data. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -46,7 +87,14 @@ export default function Hero({
                 />
               </div>
             </div>
+
             {/* <img src={imgUrl} alt="Hero" className="cs_hero_img" /> */}
+            <form
+              method="POST"
+              className="st-appointment-form"
+              id="BookNow"
+              onSubmit={onSubmit}
+            >
             <div className="cs_hero_info_wrap cs_shadow_1 cs_white_bg cs_radius_15">
               {infoList.map((item, index) => (
                 <div className="cs_hero_info_col" key={index}>
@@ -61,13 +109,13 @@ export default function Hero({
                       <p className="cs_hero_info_subtitle cs_fs_20">
                         <input
                           type="text"
-                          id={`name_${index}`} // Use index for unique IDs if needed
+                          id={`name_${index}`} 
                           name="name"
-                          placeholder={`Enter ${item.title}`} // Example placeholder
-                          // onChange={handleInputChange}
-                          // value={formData.name}
+                          placeholder={`Enter ${item.title}`} 
+                          onChange={handleInputChange}
+                          value={formData.name}
                           required
-                          className="input-field" // Apply class for styling
+                          className="input-field" 
                         />
                       </p>
                     </div>
@@ -86,14 +134,16 @@ export default function Hero({
                       </h3>
                       <p className="cs_hero_info_subtitle cs_fs_20">
                         <ReactDatePicker
+                          name="date"
+                          type="date"
                           selected={selectedDate}
                           onChange={handleDateChange}
                           dateFormat="dd/MM/yyyy"
-                          placeholderText="DD/MM/YYYY"
-                          id={`date_${index}`} // Use index for unique IDs if needed
-                          name="date"
+                          placeholderText="dd/mm/yy"
+                          id={`date_${index}`} 
+                          className="input-field"
+                          value={formData.date}
                           required
-                          className="input-field" // Apply class for styling
                         />
                       </p>
                     </div>
@@ -113,13 +163,13 @@ export default function Hero({
                       <p className="cs_hero_info_subtitle cs_fs_20">
                         <input
                           type="text"
-                          id={`phone_${index}`} // Use index for unique IDs if needed
+                          id={`phone_${index}`}
                           name="phone"
-                          placeholder={`Enter ${item.title}`} // Example placeholder
-                          // onChange={handleInputChange}
-                          // value={formData.phone}
+                          placeholder={`Enter ${item.title}`} 
+                          onChange={handleInputChange}
+                          value={formData.phone}
                           required
-                          className="input-field" // Apply class for styling
+                          className="input-field"
                         />
                       </p>
                     </div>
@@ -127,8 +177,12 @@ export default function Hero({
                 </div>
               ))}
               <div className="cs_hero_info_col">
-                <Link to={btnUrl} className="cs_btn cs_style_1">
-                  <span>{btnText}</span>
+                <Link to={btnUrl} className="cs_btn cs_style_1" 
+                type="submit"
+                id="appointment-submit"
+                name="submit"
+                >
+                  <span>{loading ? "Sending" : "Book Now"}</span>
                   <i>
                     <img src="/images/icons/arrow_white.svg" alt="Icon" />
                     <img src="/images/icons/arrow_white.svg" alt="Icon" />
@@ -136,6 +190,7 @@ export default function Hero({
                 </Link>
               </div>
             </div>
+            </form>
           </div>
         </div>
       </section>

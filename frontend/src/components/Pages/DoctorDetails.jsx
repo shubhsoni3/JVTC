@@ -25,16 +25,7 @@ export default function DoctorDetails() {
             { icon: "fa6-brands:linkedin-in", href: "/about" },
             { icon: "fa6-brands:twitter", href: "/about" },
           ]}
-          // contactInfo={[
-          //   { iconUrl: "/images/icons/call.svg" },
-          //   { title: <a href="tel:+91-7770877117">+91-7770877117</a> },
-
-          //   { iconUrl: "/images/icons/call.svg", title: "+91-9826135501" },
-          //   {
-          //     iconUrl: "/images/icons/envlope.svg",
-          //     title: "fertilitycenterjbp@gmail.com",
-          //   },
-          // ]}
+          
           contactInfo={[
             {
               iconUrl: "/images/icons/call.svg",

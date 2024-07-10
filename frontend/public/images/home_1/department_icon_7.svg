@@ -1,0 +1,17 @@
+<svg width="70" height="72" viewBox="0 0 70 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#E12454">
+    <!-- Egg Cell -->
+    <ellipse cx="35" cy="36" rx="22" ry="26" fill="#FEE4E4"/>
+    
+    <!-- Sperm Path -->
+    <path d="M30 50L35 36L50 36" stroke="#E12454" stroke-width="2" stroke-dasharray="2 2"/>
+    <circle cx="50" cy="36" r="3" fill="#E12454"/>
+    
+    <!-- Sperm -->
+    <path d="M35 36L38 30L32 30L35 36Z" fill="#E12454"/>
+    
+    <!-- Needle -->
+    <line x1="45" y1="30" x2="35" y2="36" stroke="#E12454" stroke-width="2"/>
+    <circle cx="45" cy="30" r="2.5" fill="#E12454"/>
+  </g>
+</svg>

@@ -25,8 +25,9 @@ import Counselling from "./components/FertilityServices/Counselling.jsx";
 import EggOrSpermDonation from "./components/FertilityServices/EggOrSpermDonation.jsx";
 import EmbryoDonation from "./components/FertilityServices/EmbryoDonation.jsx";
 import FertilityPreservation from "./components/FertilityServices/FertilityPreservation.jsx";
-import HysteroscopyLaparoscopy from "./components/FertilityServices/HysteroscopyLaparoscopy.jsx";
+// import HysteroscopyLaparoscopy from "./components/FertilityServices/HysteroscopyOrLaparoscopy.jsx";
 import Laparoscopy from "./components/FertilityServices/Laparoscopy.jsx";
+// import HysteroscopyOrLaparoscopy from "./components/FertilityServices/HysteroscopyOrLaparoscopy.jsx"
 import ICSI from "./components/FertilityServices/ICSI.jsx";
 import IUI from "./components/FertilityServices/IUI.jsx";
 import IVF from "./components/FertilityServices/IVF.jsx";
@@ -103,7 +104,8 @@ function App() {
             path="FertilityPreservation"
             element={<FertilityPreservation />}
           />
-          <Route path="Hysteroscopy" element={<HysteroscopyLaparoscopy />} />
+          {/* <Route pah="HysteroscopyOrLaparoscopy" element={<HysteroscopyOrLaparoscopy/>} /> */}
+          {/* <Route path="Hysteroscopy" element={<HysteroscopyLaparoscopy />} /> */}
           <Route path="Laparoscopy" element={<Laparoscopy />} />
           <Route path="ICSI" element={<ICSI />} />
           <Route path="IUI" element={<IUI />} />
