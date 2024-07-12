@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styled from "styled-components";
-import { Table, Input, Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import moment from "moment";
+import {Button, Form } from "react-bootstrap";
 import Lottie from "react-lottie";
 import Sider from "./SideBarIVF";
 // import animationData from "../../images/animation/loading-effect.json";
 
 function SecurityAmount() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [securityList, setSecurityList] = useState([]);
   const [loadingEffect, setLoadingEffect] = useState(false);
-  const [showEditSecAmount, setShowEditSecAmount] = useState(false);
-  const [showPaySecAmount, setShowPaySecAmount] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
   const [currentRows, setCurrentRows] = useState([]);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
+    const filtered = securityList.filter(item =>
+      item.Patient_Name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+      item.Mobile_number.includes(e.target.value) ||
+      item.Booking_Date.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    setFilteredData(filtered);
+    setCurrentPage(1);
   };
 
   const handleRowsPerPageChange = (e) => {
-    setRowsPerPage(e.target.value);
+    setRowsPerPage(Number(e.target.value));
   };
 
   const defaultOptions = {
@@ -34,6 +38,35 @@ function SecurityAmount() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  const getBookingData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:4000/api/auth/booknowGet"
+      );
+      console.log(response.data.data);
+
+      if (Array.isArray(response.data.data)) {
+        setSecurityList(response.data.data);
+        setFilteredData(response.data.data);
+      } else {
+        console.error("Received non-array data:", response.data);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getBookingData();
+  }, []);
+
+  useEffect(() => {
+    const startIndex = (currentPage - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
+    
+    setCurrentRows(filteredData.slice(startIndex, endIndex));
+  }, [currentPage, rowsPerPage, filteredData]);
 
   return (
     <Wrapper>
@@ -79,6 +112,7 @@ function SecurityAmount() {
                         style={{ width: "auto" }}
                         onChange={handleRowsPerPageChange}
                       >
+                        <option value={5}>5</option>
                         <option value={10}>10</option>
                         <option value={25}>25</option>
                         <option value={50}>50</option>
@@ -106,40 +140,34 @@ function SecurityAmount() {
                     style={{ background: "transparent" }}
                   ></Lottie>
                 ) : (
-                  <div className="table-responsive">
-                    <table className="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>Booking Date</th>
-                          <th>Patient Name</th>
-                          <th>Mobile Number</th>
-                        </tr>
-                      </thead>
+                  <table className="table table-bordered border-success shadow">
+                    <thead className="table table-dark">
+                      <tr>
+                        <th>Name</th>
+                        <th>Booking Date</th>
+                        <th>Mobail Number</th>
+                      </tr>
+                    </thead>
+                    <tbody>
                       {currentRows?.length === 0 ? (
-                        <div className="no-data-container">
-                          <h4>No Data Found</h4>
-                        </div>
+                        <tr>
+                          <td colSpan="6">
+                            <div className="no-data-container">
+                              <h4>No Data Found</h4>
+                            </div>
+                          </td>
+                        </tr>
                       ) : (
-                        <tbody>
-                          {currentRows?.map((item) => (
-                            <tr className="table-row" >
-                              <td>
-                                <Link
-                                  to={`/print_security_amount/${item.sa_id}`}
-                                >
-                                  {item.payment_status !== "Pending" && (
-                                    <button className="btn btn-success">
-                                      Print
-                                    </button>
-                                  )}
-                                </Link>
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
+                        currentRows?.map((item, index) => (
+                          <tr className="table-row" key={item.contact_id}>
+                            <td>{item.Patient_Name}</td>
+                            <td>{item.Booking_Date}</td>
+                            <td>{item.Mobile_number}</td>
+                          </tr>
+                        ))
                       )}
-                    </table>
-                  </div>
+                    </tbody>
+                  </table>
                 )}
                 <div className="container mt-3 mb-3">
                   <div className="row">
@@ -155,20 +183,19 @@ function SecurityAmount() {
                         {searchTerm ? (
                           <>
                             Showing Page {currentPage} of
-                            {/* {totalPages} */}
-                            from {filteredData?.length} entries (filtered from{" "}
+                            {Math.ceil(filteredData.length / rowsPerPage)} from{" "}
+                            {filteredData?.length} entries (filtered from{" "}
                             {securityList?.length} total entries)
                           </>
                         ) : (
                           <>
                             Showing Page {currentPage} of
-                            {/* {totalPages}  */}
-                            from {securityList?.length} entries
+                            {Math.ceil(securityList.length / rowsPerPage)} from{" "}
+                            {securityList?.length} entries
                           </>
                         )}
                       </h4>
                     </div>
-
                     <div className="col-lg-3 col-md-3 col-sm-3 col-12">
                       <div className="d-flex justify-content-evenly">
                         <Button
@@ -180,9 +207,13 @@ function SecurityAmount() {
                         </Button>
                         <Button
                           onClick={() => setCurrentPage(currentPage + 1)}
-                          // disabled={currentPage ===
-                          //   totalPages
-                          // }
+                          disabled={
+                            searchTerm
+                              ? currentPage ===
+                                Math.ceil(filteredData.length / rowsPerPage)
+                              : currentPage ===
+                                Math.ceil(securityList.length / rowsPerPage)
+                          }
                           variant="success"
                         >
                           Next

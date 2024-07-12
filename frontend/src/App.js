@@ -91,7 +91,7 @@ function App() {
           <Route path="gallery" element={<Gallery />} />
           <Route path="timetable" element={<Timetable />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="FertilityEvalution" element={<FertilityEvalution />} />
+          {/* <Route path="FertilityEvalution" element={<FertilityEvalution />} /> */}
           <Route path="Solution" element={<Solution />} />
           <Route path="Querise" element={<Querise />} />
           <Route path="Review" element={<Review />} />

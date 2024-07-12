@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import Swal from 'sweetalert2';
 import { FaBook } from "react-icons/fa";
 import { FaPhoneSquareAlt, FaAddressCard } from "react-icons/fa";
 import { ImSwitch } from "react-icons/im";
@@ -11,13 +12,20 @@ const Sider = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    const isConfirmed = window.confirm("Are you sure you want to Logout?");
-    if (!isConfirmed) {
-      return;
-    }
-    navigate("/");
-    // Admin-Login
-    dispatch(clearUser());
+    Swal.fire({
+      title: 'Are you sure you want to Logout?',
+      text: 'You will be logged out of your account.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, Logout',
+      cancelButtonText: 'No, Stay Logged In'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Logic for logout
+        navigate("/");
+        dispatch(clearUser());
+      }
+    });
   };
   return (
     <Wrapper>

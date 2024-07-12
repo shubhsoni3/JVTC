@@ -169,8 +169,101 @@ const contact = (req, res) => {
   });
 };
 
+const AdminLogin = (req, res) => {
+  const { username, password } = req.body;
+
+  const q = `SELECT * FROM admin WHERE username = ?`;
+
+  db.query(q, [username], (err, data) => {
+    if (err) {
+      console.error(`Error in username ${err}`);
+      return res.status(500).json({ message: "Error in username" });
+    }
+
+    if (data.length === 0) {
+      console.log("User does not exist!");
+      return res.status(401).json({ message: "User does not exist!" });
+    }
+
+    // Check if the provided password matches the hashed password stored in the database
+    const hashedPassword = data[0].password;
+    bcrypt.compare(password, hashedPassword, (err, result) => {
+      if (err) {
+        console.error("Error comparing passwords:", err);
+        return res.status(500).json({ message: "Error comparing passwords" });
+      }
+
+      if (!result) {
+        console.log("Incorrect password!");
+        return res.status(401).json({ message: "Incorrect password!" });
+      }
+
+      // Password is correct, user is authenticated
+      console.log("Login successful!");
+      res.status(200).json({ success: true, message: "Login successful!" });
+    });
+  });
+};
+
+const appointmentGet = (req, res) => {
+  // SQL query to select all data from response_data table
+  const sql = "SELECT * FROM appointment ORDER BY appointment_Id DESC";
+
+  // Execute the SQL query
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.log(`Error fetching contact data: ${err}`);
+      res
+        .status(500)
+        .json({ success: false, message: "Error fetching contact data" });
+    } else {
+      // If successful, send the results as JSON response
+      res.status(200).json({ success: true, data: results });
+    }
+  });
+}
+
+const booknowGet = (req, res) => {
+  // SQL query to select all data from response_data table
+  const sql = "SELECT * FROM booknow ORDER BY booking_id DESC";
+
+  // Execute the SQL query
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.log(`Error fetching contact data: ${err}`);
+      res
+        .status(500)
+        .json({ success: false, message: "Error fetching contact data" });
+    } else {
+      // If successful, send the results as JSON response
+      res.status(200).json({ success: true, data: results });
+    }
+  });
+};
+
+const contactGet = (req, res) => {
+  // SQL query to select all data from response_data table
+  const sql = "SELECT * FROM contact ORDER BY contact_Id DESC";
+
+  // Execute the SQL query
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.log(`Error fetching contact data: ${err}`);
+      res
+        .status(500)
+        .json({ success: false, message: "Error fetching contact data" });
+    } else {
+      // If successful, send the results as JSON response
+      res.status(200).json({ success: true, data: results });
+    }
+  });
+};
 module.exports = {
   appointment,
   booknow,
   contact,
+  AdminLogin,
+  appointmentGet,
+  booknowGet,
+  contactGet,
 };

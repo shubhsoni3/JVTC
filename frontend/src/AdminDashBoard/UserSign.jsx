@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import styled from "styled-components";
-import { Table, Input, Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import moment from "moment";
+import {Button, Form } from "react-bootstrap";
 import Lottie from "react-lottie";
 import Sider from "./SideBarIVF";
 // import animationData from "../../images/animation/loading-effect.json";
 
 function SecurityAmount() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [securityList, setSecurityList] = useState([]);
   const [loadingEffect, setLoadingEffect] = useState(false);
-  const [showEditSecAmount, setShowEditSecAmount] = useState(false);
-  const [showPaySecAmount, setShowPaySecAmount] = useState(false);
   const [filteredData, setFilteredData] = useState([]);
   const [currentRows, setCurrentRows] = useState([]);
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
+    const filtered = securityList.filter(item =>
+      item.patient_name.toLowerCase().includes(e.target.value.toLowerCase()) ||
+      item.mobile_number.includes(e.target.value) ||
+      item.appointment_date.toLowerCase().includes(e.target.value.toLowerCase())
+    );
+    setFilteredData(filtered);
+    setCurrentPage(1);
   };
 
   const handleRowsPerPageChange = (e) => {
-    setRowsPerPage(e.target.value);
+    setRowsPerPage(Number(e.target.value));
   };
 
   const defaultOptions = {
@@ -34,6 +38,34 @@ function SecurityAmount() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  const getAppointmentData = async () => {
+    try {
+      const response = await axios.get(
+        "http://localhost:4000/api/auth/appointmentGet"
+      );
+      console.log(response.data.data);
+
+      if (Array.isArray(response.data.data)) {
+        setSecurityList(response.data.data);
+        setFilteredData(response.data.data);
+      } else {
+        console.error("Received non-array data:", response.data);
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+  useEffect(() => {
+    getAppointmentData();
+  }, []);
+
+  useEffect(() => {
+    const startIndex = (currentPage - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
+    setCurrentRows(filteredData.slice(startIndex, endIndex));
+  }, [currentPage, rowsPerPage, filteredData]);
 
   return (
     <Wrapper>
@@ -79,6 +111,7 @@ function SecurityAmount() {
                         style={{ width: "auto" }}
                         onChange={handleRowsPerPageChange}
                       >
+                        <option value={5}>5</option>
                         <option value={10}>10</option>
                         <option value={25}>25</option>
                         <option value={50}>50</option>
@@ -106,113 +139,40 @@ function SecurityAmount() {
                     style={{ background: "transparent" }}
                   ></Lottie>
                 ) : (
-                  <div className="table-responsive">
-                    <table className="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th>Full Name</th>
-                          <th>Mobile Number</th>
-                          <th>Medical Record Number</th>
-                          <th>Preferred Date</th>
-                          <th>Preferred Time</th>
-                          <th>Reason for Visit</th>
-                        </tr>
-                      </thead>
+                  <table className="table table-bordered border-success shadow">
+                    <thead className="table table-dark">
+                      <tr>
+                        <th>Name</th>
+                        <th>Mobile Number</th>
+                        <th>Medical Record Number</th>
+                        <th>Preferred Date</th>
+                        <th>Preferred Time</th>
+                        <th>Visit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
                       {currentRows?.length === 0 ? (
-                        <div className="no-data-container">
-                          <h4>No Data Found</h4>
-                        </div>
+                        <tr>
+                          <td colSpan="6">
+                            <div className="no-data-container">
+                              <h4>No Data Found</h4>
+                            </div>
+                          </td>
+                        </tr>
                       ) : (
-                        <tbody>
-                          {currentRows?.map((item) => (
-                            <tr className="table-row" key={item.appointment_id}>
-                              <td>
-                                {item?.date
-                                  ? moment(
-                                      item?.date,
-                                      "DD-MM-YYYYTHH:mm:ss"
-                                    ).format("DD/MM/YYYY")
-                                  : ""}
-                              </td>
-                              <td>{item.appointment_id}</td>
-                              <td>{item.patient_name}</td>
-                              <td>{item.patient_number}</td>
-                              <td>
-                                {"Dr. "}
-                                {item.assigned_doctor}
-                              </td>
-                              <td>{item.amount}</td>
-                              <td>{item.remaining_amount}</td>
-                              <td>{item.payment_Mode}</td>
-                              <td>{item.transaction_Id}</td>
-                              <td>
-                                {item.payment_date
-                                  ? moment(
-                                      item?.payment_date,
-                                      "DD-MM-YYYYTHH:mm:ss"
-                                    ).format("DD/MM/YYYY")
-                                  : ""}
-                              </td>
-                              <td>
-                                {item?.refund_date
-                                  ? moment(
-                                      item?.refund_date,
-                                      "DD-MM-YYYYTHH:mm:ss"
-                                    ).format("DD/MM/YYYY")
-                                  : ""}
-                              </td>
-                              <td>
-                                <div className="d-flex">
-                                  <h6>{item.payment_status}</h6>
-                                </div>
-                              </td>
-                              <td>{item.refund_amount}</td>
-                              <td>
-                                {item.payment_status === "pending" ? (
-                                  <>
-                                    <button
-                                      className="mx-2 btn btn-info"
-                                      // onClick={() =>
-                                      //   openSecurityAmtPay(item.sa_id)
-                                      // }
-                                    >
-                                      Pay now
-                                    </button>
-                                  </>
-                                ) : (
-                                  <>
-                                    <button
-                                      className={`mx-2 btn btn-warning ${
-                                        item.remaining_amount === 0
-                                          ? "disabled"
-                                          : ""
-                                      }`}
-                                      // onClick={() =>
-                                      //   openSecAmountSubPopup(item.sa_id)
-                                      // }
-                                    >
-                                      Make Refund
-                                    </button>
-                                  </>
-                                )}
-                              </td>
-                              <td>
-                                <Link
-                                  to={`/print_security_amount/${item.sa_id}`}
-                                >
-                                  {item.payment_status !== "Pending" && (
-                                    <button className="btn btn-success">
-                                      Print
-                                    </button>
-                                  )}
-                                </Link>
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
+                        currentRows?.map((item, index) => (
+                          <tr className="table-row" key={item.contact_id}>
+                            <td>{item.patient_name}</td>
+                            <td>{item.mobile_number}</td>
+                            <td>{item.record_number}</td>
+                            <td>{item.appointment_date}</td>
+                            <td>{item.appointment_time}</td>
+                            <td>{item.visit}</td>
+                          </tr>
+                        ))
                       )}
-                    </table>
-                  </div>
+                    </tbody>
+                  </table>
                 )}
                 <div className="container mt-3 mb-3">
                   <div className="row">
@@ -228,15 +188,15 @@ function SecurityAmount() {
                         {searchTerm ? (
                           <>
                             Showing Page {currentPage} of
-                            {/* {totalPages} */}
-                            from {filteredData?.length} entries (filtered from{" "}
+                            {Math.ceil(filteredData.length / rowsPerPage)} from{" "}
+                            {filteredData?.length} entries (filtered from{" "}
                             {securityList?.length} total entries)
                           </>
                         ) : (
                           <>
                             Showing Page {currentPage} of
-                            {/* {totalPages}  */}
-                            from {securityList?.length} entries
+                            {Math.ceil(securityList.length / rowsPerPage)} from{" "}
+                            {securityList?.length} entries
                           </>
                         )}
                       </h4>
@@ -252,9 +212,13 @@ function SecurityAmount() {
                         </Button>
                         <Button
                           onClick={() => setCurrentPage(currentPage + 1)}
-                          // disabled={currentPage ===
-                          //   totalPages
-                          // }
+                          disabled={
+                            searchTerm
+                              ? currentPage ===
+                                Math.ceil(filteredData.length / rowsPerPage)
+                              : currentPage ===
+                                Math.ceil(securityList.length / rowsPerPage)
+                          }
                           variant="success"
                         >
                           Next
