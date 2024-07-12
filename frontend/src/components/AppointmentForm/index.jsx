@@ -33,11 +33,11 @@ export default function AppointmentForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/appointment",
+        "http://localhost:4000/api/auth/appointment",
         formData
       );
       if (response.status === 200) {
-        alert("Data saved and email sent successfully");
+        alert("Thank You");
 
         setFormData({ name: "", phone: "", record:"", date: "", time:"", visit: "" });
       }

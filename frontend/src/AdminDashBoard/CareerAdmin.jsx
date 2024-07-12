@@ -122,77 +122,7 @@ function SecurityAmount() {
                       ) : (
                         <tbody>
                           {currentRows?.map((item) => (
-                            <tr className="table-row" key={item.appointment_id}>
-                              <td>
-                                {item?.date
-                                  ? moment(
-                                      item?.date,
-                                      "DD-MM-YYYYTHH:mm:ss"
-                                    ).format("DD/MM/YYYY")
-                                  : ""}
-                              </td>
-                              <td>{item.appointment_id}</td>
-                              <td>{item.patient_name}</td>
-                              <td>{item.patient_number}</td>
-                              <td>
-                                {"Dr. "}
-                                {item.assigned_doctor}
-                              </td>
-                              <td>{item.amount}</td>
-                              <td>{item.remaining_amount}</td>
-                              <td>{item.payment_Mode}</td>
-                              <td>{item.transaction_Id}</td>
-                              <td>
-                                {item.payment_date
-                                  ? moment(
-                                      item?.payment_date,
-                                      "DD-MM-YYYYTHH:mm:ss"
-                                    ).format("DD/MM/YYYY")
-                                  : ""}
-                              </td>
-                              <td>
-                                {item?.refund_date
-                                  ? moment(
-                                      item?.refund_date,
-                                      "DD-MM-YYYYTHH:mm:ss"
-                                    ).format("DD/MM/YYYY")
-                                  : ""}
-                              </td>
-                              <td>
-                                <div className="d-flex">
-                                  <h6>{item.payment_status}</h6>
-                                </div>
-                              </td>
-                              <td>{item.refund_amount}</td>
-                              <td>
-                                {item.payment_status === "pending" ? (
-                                  <>
-                                    <button
-                                      className="mx-2 btn btn-info"
-                                      // onClick={() =>
-                                      //   openSecurityAmtPay(item.sa_id)
-                                      // }
-                                    >
-                                      Pay now
-                                    </button>
-                                  </>
-                                ) : (
-                                  <>
-                                    <button
-                                      className={`mx-2 btn btn-warning ${
-                                        item.remaining_amount === 0
-                                          ? "disabled"
-                                          : ""
-                                      }`}
-                                      // onClick={() =>
-                                      //   openSecAmountSubPopup(item.sa_id)
-                                      // }
-                                    >
-                                      Make Refund
-                                    </button>
-                                  </>
-                                )}
-                              </td>
+                            <tr className="table-row" >
                               <td>
                                 <Link
                                   to={`/print_security_amount/${item.sa_id}`}

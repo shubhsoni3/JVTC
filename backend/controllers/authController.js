@@ -6,8 +6,8 @@ dotenv.config();
 
 const appointment = (req, res) => {
   const {name, phone, record, date, time, visit } = req.body;
-  console.log(email);
-  if (!name || !phone || !record || !date || !time || !visit) {
+ 
+  if (!name || !phone  || !date || !time || !visit) {
     return res
       .status(400)
       .json({ error: "Missing required fields in the request." });
@@ -22,11 +22,11 @@ const appointment = (req, res) => {
     },
   });
 
-  console.log("email", email);
+ 
   const mailOptions = {
     from: process.env.EMAILSENDER,
     to: "shubhsoni1996th@gmail.com",
-    subject: "appointment for IVF",
+    subject: "Appointment For Jabalpur IVF Center",
     text: `Name: ${name},\n\nMobile number: "${phone}",\n\nRecord number is: "${record}", \n\nAppointment Date is: "${date}",\n\nTime: "${time}",\n\nVisit: "${visit}`,
   };
 
@@ -41,7 +41,7 @@ const appointment = (req, res) => {
 
     // Save data to the database
     const insertQuery =
-      "INSERT INTO appointmentz (	patient_name, mobile_number, record_number, appointment_date, appointment_time, visit) VALUES (?, ?, ?, ?, ?, ?)";
+      "INSERT INTO appointment (patient_name, mobile_number, record_number, appointment_date, appointment_time, visit) VALUES (?, ?, ?, ?, ?, ?)";
     const values = [name, phone, record, date, time, visit];
 
     db.query(insertQuery, values, (dbError, result) => {
@@ -58,9 +58,9 @@ const appointment = (req, res) => {
   });
 };
 
-const BookNow = (req, res) => {
+const booknow = (req, res) => {
   const { name, date, phone } = req.body;
-  // console.log(email);
+  
   if (!name ||  !date|| !phone) {
     return res
       .status(400)
@@ -80,8 +80,8 @@ const BookNow = (req, res) => {
   const mailOptions = {
     from: process.env.EMAILSENDER,
     to: "shubhsoni1996th@gmail.com",
-    subject: "Appointments From Booking",
-    text: `Booking_Patient_Name: ${name},\nBooking Date: ${date},\nbooking_mobile_number: ${phone}`,
+    subject: "Booking For Jabalpur IVF Center",
+    text: `booking_Patient_Name: ${name},\nbooking_Date: ${date},\nbooking_mobile_number: ${phone}`,
   };
 
   // Send the email
@@ -97,7 +97,7 @@ const BookNow = (req, res) => {
 
     // Save data to the database
     const insertQuery =
-      "INSERT INTO bookingnow (Booking_Patient_Name, Booking Date, booking_mobile_number ) VALUES (?, ?, ?)";
+      "INSERT INTO booknow (Patient_Name, Booking_Date, Mobile_number ) VALUES (?, ?, ?)";
     const values = [name, date, phone];
     console.log(name, date, phone);
 
@@ -137,7 +137,7 @@ const contact = (req, res) => {
   const mailOptions = {
     from: process.env.EMAILSENDER,
     to: "shubhsoni1996th@gmail.com",
-    subject: "Contact for Cardiology",
+    subject: "Contact For Jabalpur IVF Center",
     text: `Name: ${name},\n\nAddresh:"${address}", \n\nemail: "${email}",\n\nContact number : "${phone}", \n\nSubject: "${subject}",\n\nmessage: "${message}"`,
   };
 
@@ -152,7 +152,7 @@ const contact = (req, res) => {
 
     // Save data to the database
     const insertQuery =
-      "INSERT INTO contacts (contact_Persion_name, contact_Persion_address, contact_Persion_email, contact_Persion_phone, contact_Persion_subject, contact_Persion_message) VALUES (?, ?, ?, ?, ?, ?)";
+      "INSERT INTO contact (contact_Persion_name, contact_Persion_address, contact_Persion_email, contact_Persion_phone, contact_Persion_subject, contact_Persion_message) VALUES (?, ?, ?, ?, ?, ?)";
     const values = [name , address , email , phone , subject , message];
 
     db.query(insertQuery, values, (dbError, result) => {
@@ -171,6 +171,6 @@ const contact = (req, res) => {
 
 module.exports = {
   appointment,
-  BookNow,
+  booknow,
   contact,
 };
