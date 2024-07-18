@@ -1,7 +1,7 @@
 import React from "react";
 import AppointmentForm from "../../AppointmentForm";
 const contactInfo = [
-  { title: "Contact Us", subTitle: "+91 - 9826553302" },
+  { title: "Contact Us", subTitle: "+91-7770877117" },
   { title: "Email Us", subTitle: "dr.archanashrivastav@gmail.com" },
   {
     title: "Our Location",

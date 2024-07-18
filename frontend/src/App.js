@@ -15,7 +15,7 @@ import Gallery from "./components/Pages/Gallery";
 import Timetable from "./components/Pages/Timetable";
 import Contact from "./components/Pages/Contact";
 import ErrorPage from "./components/Pages/ErrorPage";
-import FertilityEvalution from "./components/Pages/FertilityEvalution";
+// import FertilityEvalution from "./components/Pages/FertilityEvalution";
 import Solution from "./components/Pages/Solution.jsx";
 import Querise from "./components/Pages/Querise.jsx";
 import Review from "./components/Pages/Review.jsx";
@@ -37,7 +37,7 @@ import AdminLogin from "./AdminDashBoard/AdminLogin.jsx";
 import CareerAdmin from "./AdminDashBoard/CareerAdmin.jsx";
 import ContactAdmin from "./AdminDashBoard/ContactAdmin.jsx";
 import UserSign from "./AdminDashBoard/UserSign.jsx";
-
+import PatintDetail from "./AdminDashBoard/PatintDetail.jsx"
 function App() {
   const { pathname } = useLocation();
   const [showModal, setShowModal] = useState(false);
@@ -51,29 +51,38 @@ function App() {
 
   useEffect(() => {
     // Show modal after 5 seconds on non-admin dashboard routes if form is not submitted
-    if (
-      !localStorage.getItem("formSubmitted") &&
-      !pathname.includes("/Admin-Page") &&
-      pathname !== "/Admin-Login"
-    ) {
-      const timer = setTimeout(() => {
-        handleShow();
-      }, 5000);
+    // if ( 
+    //   !pathname.includes("/Admin-Page") &&
+    //   pathname !== "/Admin-Login"
+    // ) 
+    // {
+    //   const timer = setTimeout(() => {
+    //     handleShow();
+    //   }, 5000);
 
-      return () => clearTimeout(timer);
-    }
+    //   return () => clearTimeout(timer);
+    // }
+    if (!pathname.includes("/Admin-Page") && pathname !== "/Admin-Login") {
+  const timer = setTimeout(() => {
+    handleShow();
+  }, 5000);
+
+  return () => clearTimeout(timer);
+}
   }, [pathname]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+    console.log(pathname);
+  }, [pathname]); 
 
+  
   return (
     <>
       {/* Render modal only if showModal is true */}
       {showModal && (
-        <ModalComponent show={showModal} handleClose={handleClose} />
-      )}
+  <ModalComponent show={showModal} handleClose={handleClose} />
+)}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -121,6 +130,7 @@ function App() {
         <Route path="/Admin-Page-Career" element={<CareerAdmin />} />
         <Route path="/Admin-Page-Contact" element={<ContactAdmin />} />
         <Route path="/Admin-Page-UserSign" element={<UserSign />} />
+        <Route path="/PatintDetail" element={<PatintDetail/>} />
       </Routes>
     </>
   );

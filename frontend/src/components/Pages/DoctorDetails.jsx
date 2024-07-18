@@ -15,15 +15,15 @@ export default function DoctorDetails() {
       <Section bottomMd={190} bottomLg={150} bottomXl={110}>
         <DoctorDetailsSection
           bgUrl="/images/doctors/doctor_details_bg.svg"
-          imgUrl="/images/icons/DrShrivastav.jpg"
+          imgUrl="/images/icons/dr.Archna.png"
           name="Dr. Archana Shrivastav, MBBS , DGO"
           department="Obstetrics, Gynecology and Laparoscopy"
           designation="Diploma in Laparoscopy (KIEL University, Germany)"
           description="With 24 years of experience in Obstetrics, Gynecology, and Laparoscopy, Dr. Archana Shrivastav is a distinguished expert in fertility treatment. She has dedicated 16 years to providing exceptional fertility care, achieving outstanding results in the field of IVF, Dr. Shrivastav is also highly skilled in performing advanced laparoscopic fertility-enhancing surgeries."
           social={[
-            { icon: "fa6-brands:facebook-f", href: "/about" },
-            { icon: "fa6-brands:linkedin-in", href: "/about" },
-            { icon: "fa6-brands:twitter", href: "/about" },
+            { icon: "fa6-brands:facebook-f", href: "https://m.facebook.com/jabalpurfertilitycentre/" },
+            { icon: "fa6-brands:linkedin-in", href: "https://www.linkedin.com/in/jabalpur-fertility-centre-97504a227/" },
+            { icon: "fa6-brands:twitter", href: "https://x.com/jabalpurivf1" },
           ]}
           
           contactInfo={[

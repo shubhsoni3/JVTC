@@ -2,15 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Section from "../Section";
 import Breadcrumb from "../Breadcrumb";
-import BannerSectionStyle9 from "../Section/BannerSection/BannerSectionStyle9";
+// import BannerSectionStyle9 from "../Section/BannerSection/BannerSectionStyle9";
 import { Icon } from "@iconify/react";
 import Spacing from "../Spacing";
-import Post from "../Post";
+import Post from "../Post/postblog";
 import Sidebar from "../Sidebar";
 import AuthorWidget from "../Widget/AuthorWidget";
-import CommentsWidget from "../Widget/CommentsWidget";
+// import CommentsWidget from "../Widget/CommentsWidget";
 import ReplyWidget from "../Widget/ReplyWidget";
 import { pageTitle } from "../../helpers/PageTitle";
+import PostBlog from "../Post/postblog";
 // const tags = [
 //   { tag: "Emergency", href: "/blog/blog-details" },
 //   { tag: "Pediatric", href: "/blog/blog-details" },
@@ -27,20 +28,21 @@ const relatedBlog = [
     btnText: "Learn More",
     href: "/blog/blog-details",
   },
-  {
-    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
-    thumbUrl: "/images/blog/post_2.jpeg",
-    date: "March 11",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
-  {
-    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
-    thumbUrl: "/images/blog/post_3.jpeg",
-    date: "March 9",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
+
+  // {
+  //   title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+  //   thumbUrl: "/images/blog/post_2.jpeg",
+  //   date: "March 11",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
+  // {
+  //   title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+  //   thumbUrl: "/images/blog/post_3.jpeg",
+  //   date: "March 9",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
 ];
 
 export default function BlogDetails() {
@@ -261,8 +263,8 @@ export default function BlogDetails() {
         <Spacing md="57" />
         <div className="row cs_gap_y_40">
           {relatedBlog?.map((item, index) => (
-            <div className="col-xl-4 col-md-6" key={index}>
-              <Post {...item} />
+            <div className="col-xl-12 col-md-6" key={index}>
+              <PostBlog {...item} />
             </div>
           ))}
         </div>

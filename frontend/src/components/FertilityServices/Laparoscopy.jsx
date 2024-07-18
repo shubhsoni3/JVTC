@@ -8,7 +8,7 @@ import Post from "../Post";
 import Sidebar from "../Sidebar/Laparoscopy";
 import { pageTitle } from "../../helpers/PageTitle";
 import styled from "styled-components";
-import FaqSection from "../Section/FaqSection";
+// import FaqSection from "../Section/FaqSection";
 import WorkingProcess from "../Section/WorkingProcess";
 import FaqSectionStyle4 from "../FaqSection/FaqSectionStyle4";
 const relatedBlog = [
@@ -20,20 +20,20 @@ const relatedBlog = [
     btnText: "Learn More",
     href: "/blog/blog-details",
   },
-  {
-    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
-    thumbUrl: "/images/blog/post_2.jpeg",
-    date: "March 11",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
-  {
-    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
-    thumbUrl: "/images/blog/post_3.jpeg",
-    date: "March 9",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
+  // {
+  //   title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+  //   thumbUrl: "/images/blog/post_2.jpeg",
+  //   date: "March 11",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
+  // {
+  //   title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+  //   thumbUrl: "/images/blog/post_3.jpeg",
+  //   date: "March 9",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
 ];
 const faqData = [
   {
@@ -65,14 +65,14 @@ const workingProcessData = [
     title: "Diagnostic Hysteroscopy",
     subTitle:
       "Insertion of a hysteroscope through the cervix into the uterus to examine the uterine cavity involves visual inspection of the endometrium and identification of any abnormalities.",
-    iconUrl: "/images/home_2/department_icon1.png",
+    iconUrl: "/images/home_2/departmentLap.png",
     number: "01",
   },
   {
     title: "Sperm Aspiration",
     subTitle:
       "In cases where abnormalities such as polyps or fibroids are detected, surgical instruments can be passed through the hysteroscope to remove or treat these lesions, offering a minimally invasive approach with a shorter recovery time compared to traditional surgery.",
-    iconUrl: "/images/home_2/department_icon2.png",
+    iconUrl: "/images/home_2/departmentLap2.png",
     number: "02",
   },
 ];
@@ -82,14 +82,14 @@ const PesaData = [
     title: "Diagnostic Laparoscopy",
     subTitle:
       "Insertion of a laparoscope through a small incision near the navel allows visualization of the pelvic organs, enabling examination of the uterus, fallopian tubes, ovaries, and surrounding structures for abnormalities.",
-    iconUrl: "/images/home_2/department_icon1.png",
+    iconUrl: "/images/home_2/departmentLap.png",
     number: "01",
   },
   {
     title: "Operative Laparoscopy",
     subTitle:
       "Performance of surgical procedures such as ovarian cystectomy, treatment of endometriosis, or tubal reanastomosis is achieved through additional small incisions, using precise surgical instruments to minimize trauma and scarring.",
-    iconUrl: "/images/home_2/department_icon2.png",
+    iconUrl: "/images/home_2/department_icon7.png",
     number: "02",
   },
 ];
@@ -112,13 +112,13 @@ export default function BlogDetails() {
             <div className="cs_social_links_wrap">
               <h2>Share:</h2>
               <div className="cs_social_links">
-                <Link to="/">
+                <Link to="https://m.facebook.com/jabalpurfertilitycentre/">
                   <Icon icon="fa-brands:facebook-f" />
                 </Link>
-                <Link to="/">
+                <Link to="https://www.linkedin.com/in/jabalpur-fertility-centre-97504a227/">
                   <Icon icon="fa-brands:linkedin-in" />
                 </Link>
-                <Link to="/">
+                <Link to="https://x.com/jabalpurivf1">
                   <Icon icon="fa-brands:twitter" />
                 </Link>
               </div>
@@ -181,6 +181,7 @@ export default function BlogDetails() {
           />
         </Section>
         {/* End FAQ Section */}
+        
                 <h2>
                 What is Laparoscopy ?
                 </h2>
@@ -312,7 +313,7 @@ export default function BlogDetails() {
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
-              <div className="col-xl-4 col-md-6" key={index}>
+              <div className="col-xl-12" key={index}>
                 <Post {...item} />
               </div>
             ))}

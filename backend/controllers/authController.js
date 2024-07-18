@@ -169,6 +169,60 @@ const contact = (req, res) => {
   });
 };
 
+const PatientDetail = (req, res) => {
+  const {name , email , phone , message} = req.body;
+  console.log(email);
+  if (!name || !email || !phone || !message) {
+    return res
+      .status(400)
+      .json({ error: "Missing required fields in the request." });
+  }
+
+  // Configure Nodemailer transporter
+  const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: process.env.EMAILSENDER,
+      pass: process.env.EMAILPASSWORD,
+    },
+  });
+
+  console.log("email", email);
+  const mailOptions = {
+    from: process.env.EMAILSENDER,
+    to: "shubhsoni1996th@gmail.com",
+    subject: "Patient Details For Jabalpur IVF Center",
+    text: `Name: ${name}, \n\nemail: "${email}",\n\nContact number : "${phone}",\n\nmessage: "${message}"`,
+  };
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error(error);
+      return res.status(500).send("An error occurred while sending the email.");
+    }
+
+    console.log("Email sent:", info.response);
+
+    // Save data to the database
+    const insertQuery =
+      "INSERT INTO Patient_Detail (Patient_name, Patient_email, Patient_contact_number , Patient_message) VALUES (?, ?, ?, ?)";
+    const values = [name , email , phone , message];
+
+    db.query(insertQuery, values, (dbError, result) => {
+      if (dbError) {
+        console.error("Error saving data to the database:", dbError);
+        return res
+          .status(500)
+          .send("An error occurred while saving data to the database.");
+      }
+
+      console.log("Data saved to the database:", result);
+      res.status(200).send("Email sent and data saved successfully!");
+    });
+  });
+};
+
 const AdminLogin = (req, res) => {
   const { username, password } = req.body;
 
@@ -258,12 +312,32 @@ const contactGet = (req, res) => {
     }
   });
 };
+
+const PatientDetailGet = (req, res) => {
+  // SQL query to select all data from response_data table
+  const sql = "SELECT * FROM Patient_Detail ORDER BY Patient_Detail_Id DESC";
+
+  // Execute the SQL query
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.log(`Error fetching contact data: ${err}`);
+      res
+        .status(500)
+        .json({ success: false, message: "Error fetching contact data" });
+    } else {
+      // If successful, send the results as JSON response
+      res.status(200).json({ success: true, data: results });
+    }
+  });
+};
 module.exports = {
   appointment,
   booknow,
   contact,
+  PatientDetail,
   AdminLogin,
   appointmentGet,
   booknowGet,
   contactGet,
+  PatientDetailGet,
 };

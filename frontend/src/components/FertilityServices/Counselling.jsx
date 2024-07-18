@@ -99,22 +99,22 @@ const blogData = [
     href: "/blog/blog-details",
     socialShare: true,
   },
-  {
-    title: "Healthy Eating on a Budget: Tips and Strategies",
-    thumbUrl: "images/blog/post_2.jpeg",
-    date: "May 4, 2023",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-    socialShare: true,
-  },
-  {
-    title: "The Importance of Regular Cancer Screenings and Early Detection",
-    thumbUrl: "images/blog/post_2.jpeg",
-    date: "May 1, 2023",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-    socialShare: true,
-  },
+  // {
+  //   title: "Healthy Eating on a Budget: Tips and Strategies",
+  //   thumbUrl: "images/blog/post_2.jpeg",
+  //   date: "May 4, 2023",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  //   socialShare: true,
+  // },
+  // {
+  //   title: "The Importance of Regular Cancer Screenings and Early Detection",
+  //   thumbUrl: "images/blog/post_2.jpeg",
+  //   date: "May 1, 2023",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  //   socialShare: true,
+  // },
 ];
 const departmentData = [
   {
@@ -122,42 +122,48 @@ const departmentData = [
     subTitle:
       "Coping strategies, managing stress and anxiety, dealing with disappointment.",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // /departments/department-details
   },
   {
     title: "Education",
     subTitle:
       "Information about IVF procedures, success rates, risks, and side effects to help you make informed decisions.",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
   {
     title: "Psychological Preparation",
     subTitle:
       " Preparing mentally for each stage of the IVF process, handling hormonal changes.",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
   {
     title: "Relationship Support",
     subTitle:
       "Helping you and your partner navigate the impact of IVF on your relationship, enhancing communication and mutual support.",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
   {
     title: "Ethical and Legal Guidance",
     subTitle:
       "Discussing ethical considerations, legal implications, and consent forms.",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
   {
     title: "Long-term Planning",
     subTitle:
       "Assisting with future family planning, including discussions on parenthood and explaining IVF to future children.",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
 ];
 export default function Counselling() {

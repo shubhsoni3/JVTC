@@ -14,9 +14,15 @@ export default function TextWidget({ logoUrl, text , heading }) {
 }
 
 const Container = styled.div`
-  @media only screen and (min-width: 1400px) and (max-width: 2100px) {
+  @media only screen and (min-width: 1200px) and (max-width: 2100px) {
     .classs {
       margin-left: 8rem;
+      margin-top: 30px;
+    }
+  }
+    @media only screen and (min-width:280px) and (max-width:700px) {
+    .classs {
+    margin-left:-30px;
       margin-top: 30px;
     }
   }

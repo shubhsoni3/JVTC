@@ -75,22 +75,26 @@
     margin-bottom: -110px;
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 2;
-    @media (max-width: 1700px) {
+    @media (min-width:1024px) and (max-width: 3500px) {
       padding: 65px;
-    }
-    @media (max-width: 1199px) {
+      justify-content: space-between;
+  }
+
+    @media (max-width: 1023px) {
       padding: 70px 25px;
       gap: 24px;
+      // justify-content: space-between;
     }
     @media (max-width: 991px) {
-      justify-content: center;
+      // justify-content: center;
     }
     @media (max-width: 767px) {
-      justify-content: space-between;
+      // justify-content: space-between;
+      
     }
     @media (max-width: 575px) {
       flex-direction: column;

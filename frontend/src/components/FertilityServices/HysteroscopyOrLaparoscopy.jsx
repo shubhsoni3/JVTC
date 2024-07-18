@@ -288,7 +288,7 @@ export default function HysteroscopyOrLaparoscopy() {
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
-              <div className="col-xl-4 col-md-6" key={index}>
+              <div className="col-xl-12" key={index}>
                 <Post {...item} />
               </div>
             ))}

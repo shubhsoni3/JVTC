@@ -81,20 +81,20 @@ const relatedBlog = [
     btnText: "Learn More",
     href: "/blog/blog-details",
   },
-  {
-    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
-    thumbUrl: "/images/blog/post_2.jpeg",
-    date: "March 11",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
-  {
-    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
-    thumbUrl: "/images/blog/post_3.jpeg",
-    date: "March 9",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
+  // {
+  //   title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+  //   thumbUrl: "/images/blog/post_2.jpeg",
+  //   date: "March 11",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
+  // {
+  //   title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+  //   thumbUrl: "/images/blog/post_3.jpeg",
+  //   date: "March 9",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
 ];
 export default function IUI() {
   pageTitle("IVF");
@@ -289,7 +289,7 @@ export default function IUI() {
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
-              <div className="col-xl-4 col-md-6" key={index}>
+              <div className="col-xl-12" key={index}>
                 <Post {...item} />
               </div>
             ))}

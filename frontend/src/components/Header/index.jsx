@@ -6,13 +6,13 @@ import Newsletter from "../Widget/Newsletter";
 import IconBoxStyle11 from "../IconBox/IconBoxStyle11";
 import Spacing from "../Spacing";
 import Button from "../Button";
-// import { IoIosArrowForward } from "react-icons/io";
 
 export default function Header({ logoSrc, variant }) {
   const [isSticky, setIsSticky] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false);
   const [sideNav, setSideNav] = useState(false);
   const [searchToggle, setSearchToggle] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -27,6 +27,12 @@ export default function Header({ logoSrc, variant }) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleLinkClick = () => {
+    setSideNav(false);
+    setMobileToggle(false);
+  };
+
   return (
     <>
       <header
@@ -38,9 +44,10 @@ export default function Header({ logoSrc, variant }) {
           <div className="container">
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
-                <Link className="cs_site_branding" to="/">
+                <Link className="cs_site_branding" to="/" onClick={handleLinkClick}>
                   <img src={logoSrc} alt="Logo" />
                 </Link>
+
                 <nav className="cs_nav">
                   <ul
                     className={`${
@@ -48,113 +55,87 @@ export default function Header({ logoSrc, variant }) {
                     }`}
                   >
                     <li>
-                      <Link to="/">Home</Link>
+                      <Link to="/" onClick={handleLinkClick}>Home</Link>
                     </li>
-
                     <li>
-                      <Link to="/about">About Us</Link>
+                      <Link to="/about" onClick={handleLinkClick}>About Us</Link>
                     </li>
-
                     <li className="menu-item-has-children">
-                      <Link to="/">Fertility Service</Link>
+                      <Link to="#" onClick={handleLinkClick}>Fertility Service</Link>
                       <DropDown>
                         <ul>
                           <li className="menu-item-has-children">
-                            <Link to="/Counselling">Counselling</Link>
+                            <Link to="/Counselling" onClick={handleLinkClick}>Counselling</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/CompleteWorkup">
-                              Comlete Fertility Workup
-                            </Link>
+                            <Link to="/CompleteWorkup" onClick={handleLinkClick}>Complete Fertility Workup</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/IUI">
-                              IUI (Intra Uterine Insemination)
-                            </Link>
+                            <Link to="/IUI" onClick={handleLinkClick}>IUI (Intra Uterine Insemination)</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/IVF">IVF (Test Tube Baby)</Link>
+                            <Link to="/IVF" onClick={handleLinkClick}>IVF (Test Tube Baby)</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/ICSI">ICSI</Link>
+                            <Link to="/ICSI" onClick={handleLinkClick}>ICSI</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/EggOrSpermDonation">
-                              Egg Donation / Sperm donation
-                            </Link>
+                            <Link to="/EggOrSpermDonation" onClick={handleLinkClick}>Egg Donation / Sperm donation</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/EmbryoDonation">Embryo Donation</Link>
+                            <Link to="/EmbryoDonation" onClick={handleLinkClick}>Embryo Donation</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/TesaPesa">TESA/PESA</Link>
+                            <Link to="/TesaPesa" onClick={handleLinkClick}>TESA/PESA</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/FertilityPreservation">
-                              Fertility Preservation (Egg freezing and sperm
-                              freezing)
-                            </Link>
+                            <Link to="/FertilityPreservation" onClick={handleLinkClick}>Fertility Preservation (Egg freezing and sperm freezing)</Link>
                           </li>
                           <li className="menu-item-has-children">
-                            <Link to="/Laparoscopy">Hysteroscopy & Laparoscopy</Link>
+                            <Link to="/Laparoscopy" onClick={handleLinkClick}>Hysteroscopy & Laparoscopy</Link>
                           </li>
-
                           <li className="menu-item-has-children">
-                            <Link to="/LaparoscopyRemoval">
+                            <Link to="/LaparoscopyRemoval" onClick={handleLinkClick}>
                               Laparoscopic Removal Of Fibroids, Ovarian Cysts,
                               Endometriosis etc
                             </Link>
                           </li>
-                          {/* <li className="menu-item-has-children">
-                            <Link to="/FertilityEvalution">
-                              Laparoscopic Removal Of Fibroids, Ovarian Cysts,
-                              Endometriosis etc.
-                            </Link>
-                          </li>
-                          <li className="menu-item-has-children">
-                            <Link to="/FertilityEvalution">
-                              Laparoscopic Tubal Cannulation
-                            </Link>
-                          </li>
-                          <li className="menu-item-has-children">
-                            <Link to="/FertilityEvalution">
-                              Hysteroscopic Removal of Fibroide,Septum,Polyps
-                            </Link>
-                          </li> */}
                         </ul>
                       </DropDown>
                     </li>
 
                     <li className="menu-item-has-children">
-                      <Link>Patient Guide</Link>
+                      <Link to="#" onClick={handleLinkClick}>Patient Guide</Link>
                       <DropDown>
                         <ul>
                           <li>
-                            <Link to="/Solution"> Are You Want Solution </Link>
+                            <Link to="/Solution" onClick={handleLinkClick}>Are You Want Solution</Link>
                           </li>
                           <li>
-                            <Link to="/Querise">Fertility Queries</Link>
+                            <Link to="/Querise" onClick={handleLinkClick}>Fertility Queries</Link>
                           </li>
                           <li>
-                            <Link to="/gallery">Gallery</Link>
+                            <Link to="/gallery" onClick={handleLinkClick}>Gallery</Link>
                           </li>
                           <li>
-                            <Link to="/blog">Blog</Link>
+                            <Link to="/blog" onClick={handleLinkClick}>Blog</Link>
                           </li>
                           <li>
-                            <Link to="/Review">Reviews</Link>
+                            <Link to="/Review" onClick={handleLinkClick}>Reviews</Link>
                           </li>
                         </ul>
                       </DropDown>
                     </li>
 
                     <li>
-                      <Link to="doctors/doctor-details">Doctor</Link>
+                      <Link to="doctors/doctor-details" onClick={handleLinkClick}>Doctor</Link>
                     </li>
+
                     <li>
-                      <Link to="/contact">Contact</Link>
+                      <Link to="/contact" onClick={handleLinkClick}>Contact</Link>
                     </li>
                   </ul>
+
                   <span
                     className={
                       mobileToggle
@@ -166,6 +147,7 @@ export default function Header({ logoSrc, variant }) {
                     <span></span>
                   </span>
                 </nav>
+                
               </div>
 
               <div className="cs_main_header_right">
@@ -190,7 +172,6 @@ export default function Header({ logoSrc, variant }) {
             <img src="/images/icons/close.svg" alt="Close" />
           </button>
           <div className="cs_logo_box">
-            {/* <img src="/images/logo.svg" alt="Logo" /> */}
             <div className="cs_height_15" />
             <h3 className="cs_fs_24 cs_semibold mb-0">
               Your Partner in Health and Wellness
@@ -263,4 +244,3 @@ export default function Header({ logoSrc, variant }) {
     </>
   );
 }
-

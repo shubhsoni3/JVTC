@@ -20,34 +20,34 @@ const categoryData = [
 ];
 const recentPostData = [
   {
-    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
-    author: "James Brown",
+    title: `Advanced IUI Treatments at Jabalpur Fertility Centre`,
+    author: "Dr. Archana Shrivastav",
     date: "August 10, 2023",
-    href: "/blog/blog-details",
+    href: "/IUI",
   },
   {
-    title: `Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle`,
-    author: "James Brown",
-    date: "August 09, 2022",
-    href: "/blog/blog-details",
-  },
-  {
-    title: `Managing Chronic Pain: Treatment Options and Strategies`,
-    author: "James Brown",
-    date: "August 08, 2022",
-    href: "/blog/blog-details",
-  },
-  {
-    title: `The Role of Physical Therapy in Injury Recovery and Prevention`,
-    author: "James Brown",
-    date: "August 07, 2022",
-    href: "/blog/blog-details",
-  },
-  {
-    title: `Allergies and Asthma: Causes, Symptoms, and Treatment Options`,
-    author: "James Brown",
+    title: `Advanced IVF Treatments`,
+    author: "Dr. Archana Shrivastav",
     date: "August 10, 2023",
-    href: "/blog/blog-details",
+    href: "/IVF",
+  },
+  {
+    title: `Advanced ICSI Treatments at Jabalpur Fertility Centre`,
+    author: "Dr. Archana Shrivastav",
+    date: "August 10, 2023",
+    href: "/ICSI",
+  },
+  {
+    title: `Advanced Male Infertility Treatments at Jabalpur Fertility Centre`,
+    author: "Dr. Archana Shrivastav",
+    date: "August 10, 2023",
+    href: "/TesaPesa",
+  },
+  {
+    title: `Advanced Diagnostic and Surgical Techniques at Jabalpur Fertility Centre`,
+    author: "Dr. Archana Shrivastav",
+    date: "August 10, 2023",
+    href: "/Laparoscopy",
   },
 ];
 

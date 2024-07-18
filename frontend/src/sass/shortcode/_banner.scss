@@ -295,19 +295,19 @@
       display: none;
     }
   }
-  .cs_banner_img {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -390px;
-    z-index: -1;
-    @media (max-width: 991px) {
-      top: -310px;
-    }
-    @media (max-width: 767px) {
-      display: none;
-    }
-  }
+  // .cs_banner_img {
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   top: -390px;
+  //   z-index: -1;
+  //   @media (max-width: 991px) {
+  //     top: -310px;
+  //   }
+  //   @media (max-width: 767px) {
+  //     display: none;
+  //   }
+  // }
 }
 .cs_banner_8_wrap {
   position: relative;

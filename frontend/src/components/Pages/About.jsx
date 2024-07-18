@@ -15,35 +15,40 @@ const departmentData = [
     subTitle:
       "Blood tests, imaging studies, and other tests to diagnose health conditions",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // /departments/department-details
   },
   {
     title: "Rehabilitation services",
     subTitle:
       "Physical therapy, occupational therapy, and other services to help patients recover from injuries",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
   {
     title: "Preventive care",
     subTitle:
       "Annual checkups, immunizations, and health screenings care preventive",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
   {
     title: "Treatment for acute and chronic conditions",
     subTitle:
       "Medication management, disease management, and other treatments to improve health outcomes",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
   {
     title: "Mental health services",
     subTitle:
       "Counseling, therapy, and other services to help patients manage mental health conditions",
     iconUrl: "/images/icons/calendar_white.svg",
-    href: "/departments/department-details",
+    href: "#",
+    // href: "/departments/department-details",
   },
 ];
 
@@ -98,14 +103,16 @@ const teamData = [
   {
     imgUrl: "images/about/Dr.Archana.png",
     name: "Dr. Archana Shrivastav",
-    designation: "Emergency Medicine Physician",
+    designation: "MBBS , DGO",
     description:
-      "With expertise in treating acute illnesses and injuries in medicine physician",
+      "Dr. Archana Shrivastav has 24 years of experience in Obstetrics, Gynecology, and Laparoscopy, specializing in fertility treatment and advanced laparoscopic surgeries.",
     social: [
-      { icon: "fa6-brands:facebook-f", href: "/about" },
-      { icon: "fa6-brands:linkedin-in", href: "/about" },
-      { icon: "fa6-brands:twitter", href: "/about" },
+      { icon: "fa6-brands:facebook-f", href: "https://m.facebook.com/jabalpurfertilitycentre/" },
+      { icon: "fa6-brands:linkedin-in", href: "https://www.linkedin.com/in/jabalpur-fertility-centre-97504a227/" },
+      { icon: "fa6-brands:twitter", href: "https://x.com/jabalpurivf1" },
     ],
+     
+
   },
   // {
   //   imgUrl: "images/about/doctor_3.png",
@@ -137,17 +144,18 @@ const galleryData = [
 const awardData = [
   {
     iconUrl: "/images/icons/award.svg",
-    title: "Malcolm Baldrige National Quality Award",
-  },
-  { iconUrl: "/images/icons/award.svg", title: "HIMSS Davies Award" },
-  {
-    iconUrl: "/images/icons/award.svg",
-    title: "Healthgrades National’s Best Hospital",
+    title: "Recipient of the ISAR Rising Star Award in February 2024.",
   },
   {
     iconUrl: "/images/icons/award.svg",
-    title: "Joint Commission Gold Seal of Approval",
+    title: "Member of the European Society of Human Reproduction and Embryology (ESHRE).",
   },
+  {
+    iconUrl: "/images/icons/award.svg",
+    title: "Past Secretary of the Indian Medical Association, Jabalpur Chapter.",
+  },
+  { iconUrl: "/images/icons/award.svg", 
+    title: "Past Vice President of the Jabalpur Obstetrics and Gynaecological Society." },
 ];
 
 export default function About() {
@@ -164,12 +172,15 @@ export default function About() {
       <Section topMd={175} topLg={125} topXl={85} bottomMd={100} bottomLg={110}>
         <FeaturesSectionStyle2
           sectionTitle="About Jabalpur Fertility Center"
-          imgUrl="/images/icons/JAbalpurFertilityCentre.png"
+          videoUrl="/videos/ivf.mp4"
+          // imgUrl="/images/icons/JAbalpurFertilityCentre.png"
           data={featureListData}
         />
       </Section>
 
-      <Section topMd={200} topLg={150} topXl={110}>
+      <Section 
+      // topMd={200} topLg={150} topXl={110}
+      >
         <DepartmentSectionStyle2
           sectionTitle="Provides Our Best Services"
           sectionTitleUp="SERVICES"

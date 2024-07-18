@@ -43,20 +43,20 @@ const relatedBlog = [
     btnText: "Learn More",
     href: "/blog/blog-details",
   },
-  {
-    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
-    thumbUrl: "/images/blog/post_2.jpeg",
-    date: "March 11",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
-  {
-    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
-    thumbUrl: "/images/blog/post_3.jpeg",
-    date: "March 9",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
+  // {
+  //   title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+  //   thumbUrl: "/images/blog/post_2.jpeg",
+  //   date: "March 11",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
+  // {
+  //   title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+  //   thumbUrl: "/images/blog/post_3.jpeg",
+  //   date: "March 9",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
 ];
 const faqData = [
   {
@@ -108,13 +108,13 @@ export default function CompleteWorkup() {
             <div className="cs_social_links_wrap">
               <h2>Share:</h2>
               <div className="cs_social_links">
-                <Link to="/">
+                <Link to="https://m.facebook.com/jabalpurfertilitycentre/">
                   <Icon icon="fa-brands:facebook-f" />
                 </Link>
-                <Link to="/">
+                <Link to="https://www.linkedin.com/in/jabalpur-fertility-centre-97504a227/">
                   <Icon icon="fa-brands:linkedin-in" />
                 </Link>
-                <Link to="/">
+                <Link to="https://x.com/jabalpurivf1">
                   <Icon icon="fa-brands:twitter" />
                 </Link>
               </div>
@@ -311,7 +311,7 @@ export default function CompleteWorkup() {
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
-              <div className="col-xl-4 col-md-6" key={index}>
+              <div className="col-xl-12" key={index}>
                 <Post {...item} />
               </div>
             ))}

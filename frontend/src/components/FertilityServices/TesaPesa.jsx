@@ -48,14 +48,14 @@ const workingProcessData = [
     title: "Sperm Aspiration",
     subTitle:
       "TESA involves using a fine needle to aspirate sperm directly from the testicle under local anesthesia or sedation, with the procedure guided by ultrasound to locate and access the testicular tissue containing sperm.",
-    iconUrl: "/images/home_2/department_icon2.png",
+    iconUrl: "/images/home_2/departmentLap2.png",
     number: "02",
   },
   {
     title: "Sperm Retrieval and Processing",
     subTitle:
       "The aspirated tissue is processed in the laboratory to isolate viable sperm for use in assisted reproductive techniques like IVF or ICSI.",
-    iconUrl: "/images/home_2/department_icon3.png",
+    iconUrl: "/images/home_2/departmentLap4.png",
     number: "03",
   },
 ];
@@ -72,14 +72,14 @@ const PesaData = [
     title: "Sperm Aspiration",
     subTitle:
       "PESA involves using a fine needle to aspirate sperm directly from the epididymis, a small organ located near the testicle, under local anesthesia or sedation. The procedure is guided by ultrasound to locate and access the epididymal tissue containing sperm.",
-    iconUrl: "/images/home_2/department_icon2.png",
+    iconUrl: "/images/home_2/departmentLap2.png",
     number: "02",
   },
   {
     title: "Sperm Retrieval and Processing",
     subTitle:
       "The aspirated fluid is processed in the laboratory to isolate viable sperm for use in assisted reproductive techniques like IVF or ICSI.",
-    iconUrl: "/images/home_2/department_icon3.png",
+    iconUrl: "/images/home_2/deprtmentLap5.png",
     number: "03",
   },
 ];
@@ -92,20 +92,20 @@ const relatedBlog = [
     btnText: "Learn More",
     href: "/blog/blog-details",
   },
-  {
-    title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
-    thumbUrl: "/images/blog/post_2.jpeg",
-    date: "March 11",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
-  {
-    title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
-    thumbUrl: "/images/blog/post_3.jpeg",
-    date: "March 9",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-  },
+  // {
+  //   title: `A Parent's Guide to Childhood Vaccinations: What You Need to Know`,
+  //   thumbUrl: "/images/blog/post_2.jpeg",
+  //   date: "March 11",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
+  // {
+  //   title: "Preventing Heart Disease: Tips for a Heart-Healthy Lifestyle",
+  //   thumbUrl: "/images/blog/post_3.jpeg",
+  //   date: "March 9",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  // },
 ];
 
 export default function TesaPesa() {
@@ -312,7 +312,7 @@ export default function TesaPesa() {
           <Spacing md="57" />
           <div className="row cs_gap_y_40">
             {relatedBlog?.map((item, index) => (
-              <div className="col-xl-4 col-md-6" key={index}>
+              <div className="col-xl-12" key={index}>
                 <Post {...item} />
               </div>
             ))}

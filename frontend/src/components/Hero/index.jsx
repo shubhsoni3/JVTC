@@ -83,7 +83,7 @@ export default function Hero({
               <p className="cs_hero_subtitle cs_fs_20 cs_heading_color">
                 {parse(subTitle)}
               </p>
-              <div className="cs_hero_btn_wrap">
+              <div className="cs_hero_btn_wrap mb-5">
                 <VideoModal
                   videoUrl={videoUrl}
                   videoBtnText={videoBtnText}
@@ -180,7 +180,7 @@ export default function Hero({
                     </div>
                   </div>
                 ))}
-                <div className="cs_hero_info_col">
+                <div className="cs_hero_info_col mt-lg-3">
                   <button
                     type="submit"
                     id="appointment-submit"
@@ -217,5 +217,7 @@ const Container = styled.div`
     outline: none; /* Remove default focus outline if desired */
     border-color: #e12454; /* Example: change border color on focus */
   }
+    .mb{
+    }
 `;
 

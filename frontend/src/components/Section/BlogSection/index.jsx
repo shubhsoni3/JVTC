@@ -20,9 +20,9 @@ export default function BlogSection({
         center
       />
       <Spacing md="72" lg="50" />
-      <div className="row gy-4">
+      <div className="row gy-12">
         {data?.map((item, index) => (
-          <div className="col-lg-4" key={index}>
+          <div className="col-lg-12" key={index}>
             <Post {...item} />
           </div>
         ))}

@@ -43,7 +43,7 @@ export default function Gallery() {
         />
       </Section>
       
-      <Section topMd={10}
+      {/* <Section topMd={10}
         topLg={10}
         topXl={20}
          >
@@ -53,7 +53,7 @@ export default function Gallery() {
           title="Don’t Let Your Health <br />Take a Backseat!"
           subTitle="Schedule an appointment with one of our experienced <br />medical professionals today!"
         />
-        </Section>
+        </Section> */}
     </>
   );
 }

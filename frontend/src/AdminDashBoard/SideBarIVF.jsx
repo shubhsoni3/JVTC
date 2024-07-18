@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Swal from 'sweetalert2';
 import { FaBook } from "react-icons/fa";
 import { FaPhoneSquareAlt, FaAddressCard } from "react-icons/fa";
+import { BiSolidUserDetail } from "react-icons/bi";
 import { ImSwitch } from "react-icons/im";
 import { clearUser } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
@@ -31,7 +32,7 @@ const Sider = () => {
     <Wrapper>
       <div className="col-12">
         <div className="px-0" id="sidebar">
-          <div className="d-flex align-items-center px-2 pt-2">
+          <div className="d-flex align-items-center px-xl-3 px-2 pt-2">
             <ul
               className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
               id="menu"
@@ -71,6 +72,20 @@ const Sider = () => {
                   <div className="mt-1">
                     <h3 class="d-none d-sm-inline fs-6 text-light appo">
                       Appointment
+                    </h3>{" "}
+                  </div>
+                </Link>
+              </li>
+
+              <hr />
+              <li className="nav-item mt-5">
+                <Link to="/PatintDetail">
+                  <div className="d-flex justify-content-center">
+                    <BiSolidUserDetail className="fs-4 bi bi-house-door-fill me-2" />
+                  </div>{" "}
+                  <div className="mt-1">
+                    <h3 class="d-none d-sm-inline fs-6 text-light appo">
+                      Patient Detail
                     </h3>{" "}
                   </div>
                 </Link>

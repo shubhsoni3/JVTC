@@ -73,27 +73,27 @@ const faqData = [
   {
     title: "What services does Jabalpur IVF Centre offer?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "Jabalpur IVF Centre offers a range of fertility treatments and services to help individuals and couples achieve pregnancy. These services typically include in vitro fertilization (IVF), intrauterine insemination (IUI), fertility testing and diagnosis, egg and sperm donation, embryo freezing, intracytoplasmic sperm injection (ICSI), preimplantation genetic testing (PGT), and counseling and support services.",
   },
   {
     title: "How do I schedule an appointment with Jabalpur IVF Centre?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "To schedule an appointment with Jabalpur IVF Centre, you can visit their official website and use their online appointment booking system. Alternatively, you can call the centre directly to speak with a representative who can assist you in scheduling an appointment. It is also possible to visit the centre in person to arrange an appointment.",
   },
   {
     title: "Do you accept insurance?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "Jabalpur IVF Centre's policy on accepting insurance may vary, so it is best to contact the centre directly to inquire about their insurance policies. They can provide information on whether they accept your insurance plan and what services are covered. It is also advisable to check with your insurance provider to understand your coverage for fertility treatments.",
   },
   {
     title: "What should I bring to my appointment?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "When attending your appointment at Jabalpur IVF Centre, it is important to bring a valid ID, such as a driver's license or passport, and your insurance card if applicable. Additionally, bring any relevant medical records or test results, a list of current medications you are taking, and a list of any questions or concerns you have about your treatment.",
   },
   {
     title: "How do I request a prescription refill?",
     content:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.",
+      "To request a prescription refill from Jabalpur IVF Centre, you can call the centre and speak with a nurse or medical assistant who can process your request. Some centres may also offer an online portal where you can request refills. Be sure to have your prescription information handy when making the request.",
   },
 ];
 const blogData = [
@@ -105,29 +105,29 @@ const blogData = [
     href: "/blog/blog-details",
     socialShare: true,
   },
-  {
-    title: "Healthy Eating on a Budget: Tips and Strategies",
-    thumbUrl: "images/blog/post_2.jpeg",
-    date: "May 4, 2023",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-    socialShare: true,
-  },
-  {
-    title: "The Importance of Regular Cancer Screenings and Early Detection",
-    thumbUrl: "images/blog/post_2.jpeg",
-    date: "May 1, 2023",
-    btnText: "Learn More",
-    href: "/blog/blog-details",
-    socialShare: true,
-  },
+  // {
+  //   title: "Healthy Eating on a Budget: Tips and Strategies",
+  //   thumbUrl: "images/blog/post_2.jpeg",
+  //   date: "May 4, 2023",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  //   socialShare: true,
+  // },
+  // {
+  //   title: "The Importance of Regular Cancer Screenings and Early Detection",
+  //   thumbUrl: "images/blog/post_2.jpeg",
+  //   date: "May 1, 2023",
+  //   btnText: "Learn More",
+  //   href: "/blog/blog-details",
+  //   socialShare: true,
+  // },
 ];
 const departmentData = [
-  {
-    title: "Counslling",
-    iconUrl: "images/home_1/department_icon_1.svg",
-    href: "/Counselling",
-  },
+  // {
+  //   title: "Counslling",
+  //   iconUrl: "images/home_1/department_icon_1.svg",
+  //   href: "/Counselling",
+  // },
   {
     title: "Complete Fertility Workup",
     iconUrl: "images/home_1/department_icon_2.svg",
@@ -135,7 +135,7 @@ const departmentData = [
   },
   {
     title: "IUI",
-    iconUrl: "images/home_1/department_icon_5.svg",
+    iconUrl: "images/home_1/department_icon_10.svg",
     href: "/IUI",
   },
   {
@@ -150,7 +150,7 @@ const departmentData = [
   },
   {
     title: "EmbryoDonation",
-    iconUrl: "images/home_1/department_icon_5.svg",
+    iconUrl: "images/home_1/department_icon_6.svg",
     href: "/EmbryoDonation",
   },
   {
@@ -160,15 +160,16 @@ const departmentData = [
   },
   {
     title: "Tesa / Pesa",
-    iconUrl: "images/home_1/department_icon_3.svg",
+    iconUrl: "images/home_1/department_icon_8.svg",
     href: "/TesaPesa",
   },
   {
     title: "Laparoscopic Removal",
-    iconUrl: "images/home_1/department_icon_6.svg",
+    iconUrl: "images/home_1/department_icon-9.svg",
     href: "/LaparoscopyRemoval",
   },
 ];
+
 const teamData = [
   {
     imgUrl: "images/about/DrArchnaShrivastav.JPG",
@@ -177,18 +178,18 @@ const teamData = [
     description:
       "Dr. Archana Shrivastav has 24 years of experience in Obstetrics, Gynecology, and Laparoscopy, specializing in fertility treatment and advanced laparoscopic surgeries.",
     social: [
-      { icon: "fa6-brands:facebook-f", href: "/about" },
-      { icon: "fa6-brands:linkedin-in", href: "/about" },
-      { icon: "fa6-brands:twitter", href: "/about" },
+      { icon: "fa6-brands:facebook-f", href: "https://m.facebook.com/jabalpurfertilitycentre/" },
+      { icon: "fa6-brands:linkedin-in", href: "https://www.linkedin.com/in/jabalpur-fertility-centre-97504a227/" },
+      { icon: "fa6-brands:twitter", href: "https://x.com/jabalpurivf1" },
     ],
   },
 ];
+
 const funFactData = [
-  { number: "15+", title: "Years of experience" },
-  { number: "95%", title: "Patient satisfaction rating" },
-  { number: "5000+", title: "Patients served annually" },
-  { number: "10+", title: "Healthcare providers on staff" },
-  // { number: "22+", title: "Convenient locations in the area" },
+  { number: '15+', title: 'Years of experience', start: 0, duration: 10.5 },
+  { number: '95%', title: 'Patient satisfaction rating', start: 0, duration: 8.5 },
+  { number: '5000+', title: 'Patients served annually', start: 0, duration: 6.5 },
+  { number: '10+', title: 'Healthcare providers on staff', start: 0, duration: 10.5 },
 ];
 
 export default function Home() {
@@ -232,7 +233,7 @@ export default function Home() {
 
         {/* Start About Section */}
         <Section>
-          <div className="mt-lg-5">
+          <div className="mt-5">
             <AboutSection
               imgUrl="/images/home_1/AboutJBpIVF.png"
               spiningImgUrl="/images/home_1/about_mini.svg"
@@ -253,12 +254,17 @@ export default function Home() {
 
         {/* Start Banner Section */}
         <Section>
-          <Spacing md="72" lg="50" />
-          <FunFactSection
-            bgUrl="images/about/fun_fact_bg.jpeg"
-            data={funFactData}
-          />
-        </Section>
+    <Spacing md="72" lg="50" />
+    <FunFactSection
+      bgUrl="images/about/fun_fact_bg.jpeg" 
+      style={{
+        // backgroundImage: `linear-gradient(#e12454 100%),`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+      data={funFactData}
+    />
+       </Section>
         {/* End Banner Section */}
 
         {/* Start Why Choose US Section */}
